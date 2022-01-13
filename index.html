@@ -6,10 +6,10 @@
 </head>
 <body>
 	<header class="responsible-navbar">
-		<div class="logo">
+		<div class="logo center-by-margin">
 			Agência Cervo Digital
 		</div>
-		<div class="headbar-options">
+		<div class="headbar-options center-by-margin">
 			<ul>
 				<li>
 					<a>Sobre Nos</a>
@@ -34,10 +34,50 @@
 		<div class="text-wrapper">
 			<h1>Agência de Desenvolvimento de sites e  Marketing Digital</h1>
 			<h2>Tenha sites profissionais e maior alcançe de vendas !</h2>
-			<div class="blue-button">
+			<div class="blue-button zoom-in">
 				QUERO UM ORÇAMENTO
 			</div>
 		</div>
+	</section>
+
+	<section class="second-section">
+		<nav class="left-logo">
+			<img src="images/logo.webp">
+		</nav>
+		<div class="middle-content">
+			<h2>
+				O que é a Cervo Digital?
+			</h2>
+			<p class="blue">
+				Somos uma agência especializada em desenvolvimento de sites, aplicações web e marketing digital
+			</p>
+			<p>
+				Todos os negócios, independente do ramo, necesitam atualmente de personalidade e de marketing digital para continuar a crescer e prosperar, e com a Cervo Digital você consegue de forma fácil, profissional e rápida
+			</p>
+			<p>
+				Visamos entregar para a sua empresa:
+			</p>
+			<div class="content-with-image">
+				<ul>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Personalidade e diferencial</div>
+					</li>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Presença e renome</div>
+					</li>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Expanção do seu networking e clientes</div>
+					</li>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Agregar valor</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="services">
+		
 	</section>
 
 	<footer>
@@ -47,8 +87,133 @@
 </html>
 
 <style type="text/css">
+	.responsible-navbar{
+		display: flex;
+		width: 100%;
+		position: fixed;
+		background: rgba(69, 69, 69, 0.56);
+		color: #fff;
+		margin-top: 15px;
+		height: 80px;
+	}
+	.logo{
+		font-size: 2em;
+		width: 25%;
+		text-align: center;
+	}
+	.headbar-options{
+		width: 75%;
+	}
+	.headbar-options > ul{
+		display: inline-flex;
+		justify-content: space-around;
+		width: 90%;
+		list-style: none;
+	}
+	.headbar-options a{
+		font-size: 1em;
+	}
+	.center-by-margin{
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
 	.first-section{
 		background-image: url('images/top-image.webp');
 		background-size: 100%;
+		height: 800px;
+		background-position: center;
+		display: flex;
+		flex-direction: column;
+		height: 800px;
+	}
+	.text-wrapper{
+		color: #fff;
+		height: 50%;
+		margin-top: 300px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		margin-left: 5%;
+	}
+	.text-wrapper h1{
+		font-size: 1.8em;
+	}
+	.text-wrapper h2{
+		font-size: 1.5em;
+	}
+
+
+	/* Second Section */
+	.second-section{
+		display: flex;
+		justify-content: space-around;
+		padding: 2%;
+	}
+	.left-logo{
+		width: 20%;
+		text-align: center;
+		margin-top:  5%;
+	}
+	.left-logo > img{
+		width: 100%;
+		border-radius: 100%;
+	}
+	.middle-content{
+		width: 50%;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		font-size: 1.5em;
+	}
+	.content-with-image{
+		background-image: url('images/black-background.webp');
+		background-size: 100%;
+		background-position: center;
+		width: 100%;
+		float: right;
+		border-radius: 15px;
+		height: 300px;
+	}
+	.content-with-image > ul{
+		list-style: none;
+		height: 95%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		color: #fff;
+	}
+	.highlight > img{
+		width: 35px;
+		height: 35px;
+	}
+	.highlight{
+		display: inherit;
+	}
+	.highlight > div{
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 2%;
+		font-size: 1.2em;
+	}
+
+	.blue{
+		color: #01A0C7;
+	}
+	.blue-button{
+		background-color: #01A0C7;
+		color: #fff;
+		width: 25%;
+		text-align: center;
+		border-radius: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		font-size: 1.5em;
+		padding: 1%;
+	}
+	.zoom-in:hover{
+		transform: scale(1.1);
+		transition: 1s;
 	}
 </style>
