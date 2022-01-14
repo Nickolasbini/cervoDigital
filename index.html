@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Agencia Cervo Digital - Solução Web</title>
+	<link rel="icon" type="image/svg" href="Source/Resourses/External/icons/favicon.svg"/>
+
+	<!-- importing jquery -->
+	<script src="resourses/jquery/jquery-3.5.1.js"></script>
+	<!-- importing FontAwesome -->
+	<link href="resourses/fontawesome/css/all.css" rel="stylesheet"></link>
 </head>
 <body>
 	<header class="responsible-navbar">
@@ -177,13 +184,13 @@
 	</section>
 
 	<section id="blog">
-		<div class="blue-background">
+		<div class="blue-background space-with-margin">
 			<div class="simple-text">
 				<p class="medium-font">Tem interesse em um de nossos serviços?</p>
 				<p>Nos podemos te ajudar a vender ou agregar valor?</p>
 				<p>Entre em contato</p>				
 			</div>
-			<div class="blue-button highlighted">
+			<div class="blue-button highlighted zoom-in">
 				Quero um orçamento grátis
 			</div>
 		</div>
@@ -193,48 +200,50 @@
 			</div>
 			<div class="blog-text">
 				<h4 class="bigger-font">Por quê ter um site ou marketing digital?</h4>
-				<p>
+				<p class="small-font">
 					Vivemos em um momento prospero da internet que proporciona diversos benefícios e facilidades. Hoje, o fato de ter a sua empresa no meio digital se tornou imprescindível, uma necessidade real. Já pensou em atrair novos clientes por meio do Google ou por suas redes sociais? Mostrando profissionalidade, transparência e confiança? 
 				</p>
-				<p>
+				<p class="small-font">
 					Para crescer nos dias de hoje, é necessário se adequar ao futuro, mas não se esqueça de que “para criar o futuro, você deve cria-lo". Nos queremos te ajudar.
 				</p>
 			</div>
 		</div>
 	</section>
 
-	<section id="clients">
-		<h4 class="bigger-font">Clientes e Trabalhos</h1>
+	<section id="clients" class="space-with-margin">
+		<h4 class="bigger-font center-text">Clientes e Trabalhos</h4>
 		<div class="cards-wrapper">
 			<div class="card work-card" style="background-image: url('works/traposeretalhos-logo.svg');">
-				<a href="https://traposeretalhos.com/" class="absolute-to-bottom">Trapos e Retalhos</a>
-			</div>
-			<div class="card">
-				<div class="card-top">
-					<img src="images/logo.webp">
-					<h6 class="title-of-card">
-						Landing Pages
-					</h6>
-				</div>
-				<div class="card-body">
-					Desenvolvemos uma página única para captar leads e potênciais clientes
+				<div class="absolute-to-bottom show-opacity">
+					<a href="https://www.traposeretalhos.com/">https://wwww.traposeretalhos.com</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<div class="blue-background">
+	<div class="blue-background space-with-margin">
 		<div class="simple-text">
 			<p class="medium-font">Solicitar orçamento</p>
 			<p>Domine seu espaço digital, venda mais e alcançe seus clientes</p>
 		</div>
-		<div class="blue-button highlighted">
+		<div class="blue-button highlighted zoom-in">
 			Quero um orçamento grátis
 		</div>
 	</div>
 
 	<section id="questions">
-		
+		<h4 class="bigger-font center-text">Dúvidas frequentes</h4>
+		<p class="small-font">
+			Informações possivelmente úteis para você
+		</p>
+		<div class="questions-box">
+			<div class="small-font question">
+				Comprei o domínio, e agora, o que mais preciso?<span><i class="fas fa-caret-down"></i></span>
+			</div>
+			<div class="small-font question-answer">
+				Muito bem, para seu site estar no ar você precisará de uma hospedagem. Não há problema, caso já tenha dominio, manteremos o mesmo domínio em seu sit além de desenvolver o design, colocaremos no ar. 
+			</div>
+		</div>
 	</section>
 
 	<footer>
@@ -275,6 +284,9 @@
 	.center-by-margin{
 		margin-top: auto;
 		margin-bottom: auto;
+	}
+	.center-text{
+		text-align: center;
 	}
 
 	.first-section{
@@ -370,6 +382,9 @@
 		color: #fff;
 		font-size: 1.4em;
 	}
+	.small-font{
+		font-size: 1.4em;
+	}
 	.medium-font{
 		font-size: 1.6em;
 	}
@@ -398,6 +413,7 @@
 	.zoom-in:hover{
 		transform: scale(1.1);
 		transition: 1s;
+		cursor: pointer;
 	}
 
 	/* Services Cards */
@@ -426,7 +442,7 @@
 		text-align: center;
 		padding: 15px;
 		margin: 25px;
-		height: 250px;
+		height: 300px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -449,8 +465,19 @@
 		text-align: left;
 	}
 	.absolute-to-bottom{
-		position: absolute;
-		bottom: 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+	}
+	.absolute-to-bottom > a{
+		padding: 15px;
+		background: gray;
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.5em;
 	}
 	.work-card{
 		background-repeat: no-repeat;
@@ -459,5 +486,42 @@
 		border-radius: 15px;
 		border: 1px solid #cacaca70;
 		position: relative;
+		padding: unset!important;
+	}
+	.show-opacity{
+		opacity: 0;
+		cursor: pointer;
+	}
+	.show-opacity:hover{
+		opacity: 1;
+		transition: 2.0s;
+	}
+
+	/* Blog  */
+	.blog-content{
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+	}
+	.blog-image{
+		width: 40%;
+	}
+	.blog-image > img{
+		width: 90%;
+		height: 600px;
+		border-radius: 15px;
+	}
+	.blog-text{
+		width: 40%;
+	}
+	.space-with-margin{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+
+	/* Questions */
+	.questions-box{
+		width: 80%;
+		margin: auto;
 	}
 </style>
