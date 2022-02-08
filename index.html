@@ -4,47 +4,489 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
 	<title>Agencia Cervo Digital - Solução Web</title>
-	<link rel="icon" type="image/svg" href="Source/Resourses/External/icons/favicon.svg"/>
+	<link rel="icon" href="images/favicon.webp">
 
+	<!-- importing CSS -->
+	<link href="resourses/stylesheet.css" rel="stylesheet"></link>
 	<!-- importing jquery -->
 	<script src="resourses/jquery/jquery-3.5.1.js"></script>
 	<!-- importing FontAwesome -->
 	<link href="resourses/fontawesome/css/all.css" rel="stylesheet"></link>
+	<!-- importing Toast -->
+	<link href="resourses/messager-toast.css" rel="stylesheet"></link>
 </head>
 <body>
-	<section style="text-align: center;">
-        <h1>Em manutenção</h1>
-        <img style="width: 250px; height: 250px; border-radius: 50%;" src="https://cervodigital.com.br/images/logo.webp">
-    
-        <ul class="social-media">
-            <li>
-                <a href="https://web.whatsapp.com/send?phone=5541984320432" target="_blank">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNLjA1NyAyNGwxLjY4Ny02LjE2M2MtMS4wNDEtMS44MDQtMS41ODgtMy44NDktMS41ODctNS45NDYuMDAzLTYuNTU2IDUuMzM4LTExLjg5MSAxMS44OTMtMTEuODkxIDMuMTgxLjAwMSA2LjE2NyAxLjI0IDguNDEzIDMuNDg4IDIuMjQ1IDIuMjQ4IDMuNDgxIDUuMjM2IDMuNDggOC40MTQtLjAwMyA2LjU1Ny01LjMzOCAxMS44OTItMTEuODkzIDExLjg5Mi0xLjk5LS4wMDEtMy45NTEtLjUtNS42ODgtMS40NDhsLTYuMzA1IDEuNjU0em02LjU5Ny0zLjgwN2MxLjY3Ni45OTUgMy4yNzYgMS41OTEgNS4zOTIgMS41OTIgNS40NDggMCA5Ljg4Ni00LjQzNCA5Ljg4OS05Ljg4NS4wMDItNS40NjItNC40MTUtOS44OS05Ljg4MS05Ljg5Mi01LjQ1MiAwLTkuODg3IDQuNDM0LTkuODg5IDkuODg0LS4wMDEgMi4yMjUuNjUxIDMuODkxIDEuNzQ2IDUuNjM0bC0uOTk5IDMuNjQ4IDMuNzQyLS45ODF6bTExLjM4Ny01LjQ2NGMtLjA3NC0uMTI0LS4yNzItLjE5OC0uNTctLjM0Ny0uMjk3LS4xNDktMS43NTgtLjg2OC0yLjAzMS0uOTY3LS4yNzItLjA5OS0uNDctLjE0OS0uNjY5LjE0OS0uMTk4LjI5Ny0uNzY4Ljk2Ny0uOTQxIDEuMTY1LS4xNzMuMTk4LS4zNDcuMjIzLS42NDQuMDc0LS4yOTctLjE0OS0xLjI1NS0uNDYyLTIuMzktMS40NzUtLjg4My0uNzg4LTEuNDgtMS43NjEtMS42NTMtMi4wNTktLjE3My0uMjk3LS4wMTgtLjQ1OC4xMy0uNjA2LjEzNC0uMTMzLjI5Ny0uMzQ3LjQ0Ni0uNTIxLjE1MS0uMTcyLjItLjI5Ni4zLS40OTUuMDk5LS4xOTguMDUtLjM3Mi0uMDI1LS41MjEtLjA3NS0uMTQ4LS42NjktMS42MTEtLjkxNi0yLjIwNi0uMjQyLS41NzktLjQ4Ny0uNTAxLS42NjktLjUxbC0uNTctLjAxYy0uMTk4IDAtLjUyLjA3NC0uNzkyLjM3MnMtMS4wNCAxLjAxNi0xLjA0IDIuNDc5IDEuMDY1IDIuODc2IDEuMjEzIDMuMDc0Yy4xNDkuMTk4IDIuMDk1IDMuMiA1LjA3NiA0LjQ4Ny43MDkuMzA2IDEuMjYzLjQ4OSAxLjY5NC42MjYuNzEyLjIyNiAxLjM2LjE5NCAxLjg3Mi4xMTguNTcxLS4wODUgMS43NTgtLjcxOSAyLjAwNi0xLjQxMy4yNDgtLjY5NS4yNDgtMS4yOS4xNzMtMS40MTR6Ii8+PC9zdmc+">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/cervodigital_/">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMi4xNjNjMy4yMDQgMCAzLjU4NC4wMTIgNC44NS4wNyAzLjI1Mi4xNDggNC43NzEgMS42OTEgNC45MTkgNC45MTkuMDU4IDEuMjY1LjA2OSAxLjY0NS4wNjkgNC44NDkgMCAzLjIwNS0uMDEyIDMuNTg0LS4wNjkgNC44NDktLjE0OSAzLjIyNS0xLjY2NCA0Ljc3MS00LjkxOSA0LjkxOS0xLjI2Ni4wNTgtMS42NDQuMDctNC44NS4wNy0zLjIwNCAwLTMuNTg0LS4wMTItNC44NDktLjA3LTMuMjYtLjE0OS00Ljc3MS0xLjY5OS00LjkxOS00LjkyLS4wNTgtMS4yNjUtLjA3LTEuNjQ0LS4wNy00Ljg0OSAwLTMuMjA0LjAxMy0zLjU4My4wNy00Ljg0OS4xNDktMy4yMjcgMS42NjQtNC43NzEgNC45MTktNC45MTkgMS4yNjYtLjA1NyAxLjY0NS0uMDY5IDQuODQ5LS4wNjl6bTAtMi4xNjNjLTMuMjU5IDAtMy42NjcuMDE0LTQuOTQ3LjA3Mi00LjM1OC4yLTYuNzggMi42MTgtNi45OCA2Ljk4LS4wNTkgMS4yODEtLjA3MyAxLjY4OS0uMDczIDQuOTQ4IDAgMy4yNTkuMDE0IDMuNjY4LjA3MiA0Ljk0OC4yIDQuMzU4IDIuNjE4IDYuNzggNi45OCA2Ljk4IDEuMjgxLjA1OCAxLjY4OS4wNzIgNC45NDguMDcyIDMuMjU5IDAgMy42NjgtLjAxNCA0Ljk0OC0uMDcyIDQuMzU0LS4yIDYuNzgyLTIuNjE4IDYuOTc5LTYuOTguMDU5LTEuMjguMDczLTEuNjg5LjA3My00Ljk0OCAwLTMuMjU5LS4wMTQtMy42NjctLjA3Mi00Ljk0Ny0uMTk2LTQuMzU0LTIuNjE3LTYuNzgtNi45NzktNi45OC0xLjI4MS0uMDU5LTEuNjktLjA3My00Ljk0OS0uMDczem0wIDUuODM4Yy0zLjQwMyAwLTYuMTYyIDIuNzU5LTYuMTYyIDYuMTYyczIuNzU5IDYuMTYzIDYuMTYyIDYuMTYzIDYuMTYyLTIuNzU5IDYuMTYyLTYuMTYzYzAtMy40MDMtMi43NTktNi4xNjItNi4xNjItNi4xNjJ6bTAgMTAuMTYyYy0yLjIwOSAwLTQtMS43OS00LTQgMC0yLjIwOSAxLjc5MS00IDQtNHM0IDEuNzkxIDQgNGMwIDIuMjEtMS43OTEgNC00IDR6bTYuNDA2LTExLjg0NWMtLjc5NiAwLTEuNDQxLjY0NS0xLjQ0MSAxLjQ0cy42NDUgMS40NCAxLjQ0MSAxLjQ0Yy43OTUgMCAxLjQzOS0uNjQ1IDEuNDM5LTEuNDRzLS42NDQtMS40NC0xLjQzOS0xLjQ0eiIvPjwvc3ZnPg==">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/cervo.digital">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjIuNjc1IDBoLTIxLjM1Yy0uNzMyIDAtMS4zMjUuNTkzLTEuMzI1IDEuMzI1djIxLjM1MWMwIC43MzEuNTkzIDEuMzI0IDEuMzI1IDEuMzI0aDExLjQ5NXYtOS4yOTRoLTMuMTI4di0zLjYyMmgzLjEyOHYtMi42NzFjMC0zLjEgMS44OTMtNC43ODggNC42NTktNC43ODggMS4zMjUgMCAyLjQ2My4wOTkgMi43OTUuMTQzdjMuMjRsLTEuOTE4LjAwMWMtMS41MDQgMC0xLjc5NS43MTUtMS43OTUgMS43NjN2Mi4zMTNoMy41ODdsLS40NjcgMy42MjJoLTMuMTJ2OS4yOTNoNi4xMTZjLjczIDAgMS4zMjMtLjU5MyAxLjMyMy0xLjMyNXYtMjEuMzVjMC0uNzMyLS41OTMtMS4zMjUtMS4zMjUtMS4zMjV6Ii8+PC9zdmc+">
-                </a>
-            </li>
-        </ul>
-    </section>
-</body>
+	<header class="responsible-navbar">
+		<div class="logo center-by-margin">
+			Agência Cervo Digital
+		</div>
+		<div class="headbar-options center-by-margin">
+			<ul>
+				<li>
+					<a onclick="$(document).scrollTop(0);">Sobre Nos</a>
+				</li>
+				<li>
+					<a href="#services">Serviços</a>
+				</li>
+				<li>
+					<a href="#clients">Clientes</a>
+				</li>
+				<li>
+					<a href="#blog">Blog</a>
+				</li>
+				<li>
+					<a href="#contact-footer">Entre em contato</a>
+				</li>
+			</ul>
+		</div>
+	</header>
 
-<style>
-    .social-media{
-        list-style: none;
-        padding-left: unset;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    li{
-        margin: 15px;
-    }
-</style>
+	<section id="top-of-page" class="first-section">
+		<div class="text-wrapper">
+			<h1>Agência de Desenvolvimento de sites e  Marketing Digital</h1>
+			<h2>Tenha sites profissionais e maior alcançe de vendas !</h2>
+			<div class="blue-button fast-transition open-whatsapp">
+				QUERO UM ORÇAMENTO
+			</div>
+		</div>
+	</section>
+
+	<section class="second-section">
+		<nav class="left-logo">
+			<img src="images/logo.webp">
+		</nav>
+		<div class="middle-content">
+			<h2>
+				O que é a Cervo Digital?
+			</h2>
+			<p class="blue">
+				Somos uma agência especializada em desenvolvimento de sites, aplicações web e marketing digital
+			</p>
+			<p>
+				Todos os negócios, independente do ramo, necesitam atualmente de personalidade e de marketing digital para continuar a crescer e prosperar, e com a Cervo Digital você consegue de forma fácil, profissional e rápida
+			</p>
+			<p>
+				Visamos entregar para a sua empresa:
+			</p>
+			<div class="content-with-image">
+				<ul>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Personalidade e diferencial</div>
+					</li>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Presença e renome</div>
+					</li>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Expanção do seu networking e clientes</div>
+					</li>
+					<li class="highlight">
+						<img src="images/check-icon.webp"><div>Agregar valor</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="services" class="services">
+		<h1>Serviços</h1>
+		<p>
+			Em meio ao mundo digital, todos os tipos serviços tem a sua própia importancia e objetivo.
+		</p>
+		<div class="cards-wrapper">
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/web-icon.webp">
+					<h6 class="title-of-card">
+						Criação de sites
+					</h6>
+				</div>
+				<div class="card-body">
+					Criamos, atualizamos e desenvolvemos sites profissionais, agradáveis e harmônicos
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/landingpage-icon.webp">
+					<h6 class="title-of-card">
+						Landing Pages
+					</h6>
+				</div>
+				<div class="card-body">
+					Desenvolvemos uma página única para captar leads e potênciais clientes
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/ecommerce-icon.webp">
+					<h6 class="title-of-card">
+						E-commerce
+					</h6>
+				</div>
+				<div class="card-body">
+					Vendas online são muito lucrativas e, tendo um e-commerce você vende online 24 horas por dia todos os dias
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/socialmedia-icon.webp">
+					<h6 class="title-of-card">
+						Gestão de midias sociais
+					</h6>
+				</div>
+				<div class="card-body">
+					Gerenciamos sua rede social afim de criar uma personalidade forte e reconhecida
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/design-icon.webp">
+					<h6 class="title-of-card">
+						Suporte analítico e criativo
+					</h6>
+				</div>
+				<div class="card-body">
+					Artes para postagem, idéias criativas para frases de efeito real
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/adwords-icon.webp">
+					<h6 class="title-of-card">
+						Google Ads
+					</h6>
+				</div>
+				<div class="card-body">
+					Implementação e consultoria de tráfego pago
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/seo-icon.webp">
+					<h6 class="title-of-card">
+						SEO
+					</h6>
+				</div>
+				<div class="card-body">
+					Esteja no topo de buscas na internet
+				</div>
+			</div>
+			<div class="card fast-transition zoom-in">
+				<div class="card-top">
+					<img src="images/webapp-icon.webp">
+					<h6 class="title-of-card">
+						Aplicação Web
+					</h6>
+				</div>
+				<div class="card-body">
+					Pensou em uma aplicação web própia e com a sua cara? Então podemos te ajudar
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="blog">
+		<div class="blue-background space-with-margin">
+			<div class="simple-text">
+				<p class="medium-font">Tem interesse em um de nossos serviços?</p>
+				<p>Nos podemos te ajudar a vender ou agregar valor?</p>
+				<p>Entre em contato</p>				
+			</div>
+			<div class="blue-button highlighted fast-transition open-whatsapp">
+				Quero um orçamento grátis
+			</div>
+		</div>
+		<div class="blog-content">
+			<div class="blog-image">
+				<img src="images/blog-image.webp">
+			</div>
+			<div class="blog-text">
+				<h4 class="bigger-font">Por quê ter um site ou marketing digital?</h4>
+				<p class="small-font">
+					Vivemos em um momento prospero da internet que proporciona diversos benefícios e facilidades. Hoje, o fato de ter a sua empresa no meio digital se tornou imprescindível, uma necessidade real. Já pensou em atrair novos clientes por meio do Google ou por suas redes sociais? Mostrando profissionalidade, transparência e confiança? 
+				</p>
+				<p class="small-font">
+					Para crescer nos dias de hoje, é necessário se adequar ao futuro, mas não se esqueça de que “para criar o futuro, você deve cria-lo". Nos queremos te ajudar.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="clients" class="space-with-margin">
+		<h4 class="bigger-font center-text">Clientes e Trabalhos</h4>
+		<div class="cards-wrapper">
+			
+			<div class="card work-card" style="background-image: url('works/traposeretalhos-logo.svg');">
+				<h3 class="work-card-title" title="Sistema web">Aplicação Web</h3>
+				<div class="absolute-to-bottom show-opacity trigger-of-work-card">
+					<a href="https://www.traposeretalhos.com/" target="_blank" class="link-of-work-card">https://wwww.traposeretalhos.com</a>
+				</div>
+			</div>
+			<div class="card work-card" style="background-image: url('works/beautyboutique-logo.webp');">
+				<h3 class="work-card-title" title="Loja virtual">E-commerce</h3>
+				<div class="absolute-to-bottom show-opacity trigger-of-work-card">
+					<a href="https://beautyboutique.confere.shop/" target="_blank" class="link-of-work-card">https://beautyboutique.confere.shop</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="blue-background space-with-margin">
+		<div class="simple-text">
+			<p class="medium-font">Solicitar orçamento</p>
+			<p>Domine seu espaço digital, venda mais e alcançe seus clientes</p>
+		</div>
+		<div class="blue-button highlighted fast-transition open-whatsapp">
+			Quero um orçamento grátis
+		</div>
+	</div>
+
+	<section id="questions" class="space-with-margin">
+		<h4 class="bigger-font center-text">Dúvidas frequentes</h4>
+		<p class="small-font center-text">
+			Informações possivelmente úteis para você
+		</p>
+		<div class="questions-box">
+			<div class="question-wrapper">
+				<div class="small-font question center-with-flex">
+					O que é um dominio e por que preciso de um?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+				</div>
+				<div class="small-font question-answer hidden">
+					O domínio é a forma que seu site se chama, é por esse nome que ferramentas de busca como o Google conseguem encontrar sites de acordo com o que é escrito na busca.
+				</div>
+			</div>
+			<div class="question-wrapper">
+				<div class="small-font question center-with-flex">
+					Tenho ou comprei um domínio, o que mais preciso agora?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+				</div>
+				<div class="small-font question-answer hidden">
+					Para o seu site estar funcionando você vai precisar de uma hospedagem. Pense nisso como o aluguel de um espaço, nesse caso um espaço na internet. Com essas duas coisas já podemos começar a criar a sua história.
+				</div>
+			</div>
+			<div class="question-wrapper">
+				<div class="small-font question center-with-flex">
+					O que é gestão de midias sociais e porquê isso é importante?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+				</div>
+				<div class="small-font question-answer hidden">
+					Com o avanço da internet, a cada dias estamos mais e mais conectados uns com os outros. Fazemos conexões de diversas formas mas em geral, as redes sociais são as responsáveis pelas maiorias das conexões. A gestão de midias sociais se trata de estratêgias aplicadas por profissionais para assegurar que a sua rede social prospere e atrai novos clientes e leads. 
+				</div>
+			</div>
+			<div class="question-wrapper">	
+				<div class="small-font question center-with-flex">
+					Qual é a direfença entre um site e uma landing page?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+				</div>
+				<div class="small-font question-answer hidden">
+					Um site possui várias páginas que trazem informações a respeito de um negócio, em geral com informações a respeito de produtos, contatos ou outras informações relevantes a aquele negocio. Uma Landing Page é um site de uma única página, tem como objetivo converter novos clientes e leads, podem também destacar um produto ou serviço de um negócio em uma única página.
+				</div>
+			</div>
+			<div class="question-wrapper">
+				<div class="small-font question center-with-flex">
+					O que é gestão de midias sociais e porquê isso é importante?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+				</div>
+				<div class="small-font question-answer hidden">
+					Com o avanço da internet, a cada dias estamos mais e mais conectados uns com os outros. Fazemos conexões de diversas formas mas em geral, as redes sociais são as responsáveis pelas maiorias das conexões. A gestão de midias sociais se trata de estratêgias aplicadas por profissionais para assegurar que a sua rede social prospere e atrai novos clientes e leads. 
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="contact-footer">
+		<div class="footer-wrapper">
+			<div class="footer-logo">
+				<img src="images/logo.webp">
+				<h1 class="small-font regular-font">Cervo Digital</h1>
+				<h4 class="small-font regular-font">Agência de desenvolvimento web e de marketing digital</h4>
+			</div>
+			<div class="footer-address">
+				<h1 class="medium-font">Nossos canais</h1>
+				<div class="social-media-icons">
+					<a href="https://web.whatsapp.com/send?phone=5541984320432" target="_blank"><img id="whatsapp" src="images/whatsapp-gray.svg" title="ver whatsapp"></a>
+					<a href="https://www.instagram.com/cervodigital_/" target="_blank"><img id="instagram" src="images/instagram-gray.svg" title="ver instagram"></a>
+					<a href="https://www.facebook.com/cervo.digital" target="_blank"><img id="facebook" src="images/facebook-gray.svg" title="ver facebook"></a>
+				</div>
+				<p class="small-font">Brasil</p>
+				<p class="small-font">Avenida Archelau de Almeida Torres | Araucária, PR</p>
+				<p class="small-font">WhatsApp: +55 41 9 8432-0432</p>
+				<p class="small-font">Email: cervodigital@hotmail.com</p>
+			</div>
+			<div class="send-message">
+				<h2 class="medium-font">Envie uma mensagem</h2>
+				<h4 class="small-font">Se tiver alguma dúvida, entre em contato para podermos resolver sua dúvida</h4>
+				<div class="wrapper">
+					<input type="email" id="email" placeholder="Email" class="tiny-text">
+				</div>
+				<div class="wrapper">
+					<input type="text" id="name" placeholder="Nome" class="tiny-text">
+				</div>
+				<div class="wrapper">
+					<input type="text" id="message-title" placeholder="Titulo da Mensagem" class="tiny-text">
+				</div>
+				<div class="wrapper">
+					<textarea type="text" id="message-text" placeholder="Mensagem" class="tiny-text"></textarea>
+				</div>
+				<div class="wrapper send-button fast-transition" title="Enviar mensagem">
+					Enviar
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="company-info center-text">
+		<div class="cnpj" style="display: none;">Company CNPJ</div>
+		<div>© Copyright agência cervo digital. 2021 - Todos os direitos reservados</div>
+	</div>
+
+	<div class="fixed-button whatsapp-btn">
+		<a href="https://web.whatsapp.com/send?phone=5541984320432" target="_blank" class="whats-link"><img id="whatsapp" src="images/whatsapp.svg" title="ver whatsapp"></a>
+	</div>
+	<div class="fixed-button go-up" style="display:none;">
+		<a href="#top-of-page">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</div>
+
+	<div id="messager"></div>
+	<div id="maintancePage"></div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="resourses/messager-toast.js"></script>
+<script type="text/javascript">	
+	checkScreenSize();
+	function checkScreenSize(){
+		if ($(window).width() < 780) {
+		   window.location.href = 'maintancePage.html';
+		}
+	}
+
+	$(document).ready(function(){
+		getPositions();
+	});
+
+	// Performs the animation for the question oppening and closing icon rotation
+	$('.question').on('click', function(){
+		$('.question-answer').addClass('hidden');
+		$('.question').removeClass('oppened-question');
+		iTag = $(this).parent().find('.question-icon i');
+		if(iTag.hasClass('rotate-down') == true){
+			// opens the answer
+			iTag.addClass('rotate-up');
+			iTag.removeClass('rotate-down');
+			$(this).parent().find('.question-answer').addClass('hidden');
+		}else{
+			// closes the answer
+			iTag.removeClass('rotate-up');
+			iTag.addClass('rotate-down');
+			$(this).parent().find('.question-answer').removeClass('hidden');
+			$(this).addClass('oppened-question');
+		}
+	});
+
+	var srcOfImages = {
+		whatsapp : 'whatsapp.svg',
+		facebook : 'facebook.svg',
+		instagram: 'instagram.svg'
+	};
+	var defaultImages = {
+		whatsapp : 'whatsapp-gray.svg',
+		facebook : 'facebook-gray.svg',
+		instagram: 'instagram-gray.svg'
+	};
+	$('.social-media-icons img').hover(function(){
+		var idOfImg = $(this).attr('id');
+		$(this).attr('src', 'images/' + srcOfImages[idOfImg]);
+	});
+	$('.social-media-icons img').mouseout(function(){
+		var idOfImg = $(this).attr('id');
+		$(this).attr('src', 'images/' + defaultImages[idOfImg]);
+	});
+
+	var elementsToHandle = {
+		services: '.services',
+		blog:     '#blog',
+		clients:  '#clients'
+	};
+
+	var positions = [];
+	var elementsToVerify = ['services'];
+	function getPositions(){
+		for(i = 0; i < elementsToVerify.length; i++){
+			var number   = $('#' + elementsToVerify[i]).position().top;
+			var height   = $('#' + elementsToVerify[i]).css('height');
+			height = height.replace('px', '');
+			var position = Math.ceil(number) - Math.ceil(height / 4);
+			positions.push(position);
+			$('#' + elementsToVerify[i]).css('transform', 'translateY(50%)');
+		}
+	}
+
+	var positionOfScreen = 0;
+	$(window).scroll(function(){
+		positionOfScreen = $(this).scrollTop();
+		if(positionOfScreen > 0){
+			$('.go-up').fadeIn();
+		}else{
+			$('.go-up').fadeOut();
+		}
+
+		if(positionOfScreen == 0){
+			$('.responsible-navbar').removeClass('top-to-bottom');
+		}else{
+			$('.responsible-navbar').addClass('top-to-bottom');
+		}
+		checkPositions();
+	});
+
+	function checkPositions(){
+		for(i = 0; i < positions.length; i++){
+			if(positionOfScreen > (positions[i] - 200)){
+				if($('#' + elementsToVerify[i]).hasClass('climb-animation') == false){
+					$('#' + elementsToVerify[i]).addClass('climb-animation');
+				}
+			}
+		}
+	}
+
+	$('.send-button').on('click', function(){
+		sendEmail();
+	});
+
+	var cervoDigitalMail = 'cervodigital@hotmail.com';
+	function sendEmail(){
+		var email   = $('#email').val();
+		var name    = $('#name').val();
+		var subject = $('#message-title').val();
+		var body    = $('#message-text').val();
+		if(email == ''){
+			openToast('insira um email');
+			return;
+		}
+		if(name == ''){
+			openToast('insira um nome');
+			return;
+		}
+		if(subject == ''){
+			openToast('insira um titulo');
+			return;
+		}
+		if(body == ''){
+			openToast('insira uma mensage');
+			return;
+		}
+		body += '%0D%0A%0D%0AAtensiosamente: ' + name + '%0D%0A%0D%0A';
+		window.open('mailto:'+cervoDigitalMail+'?subject='+subject+'&body='+body);
+		$('#email').val('');
+		$('#name').val('');
+		$('#message-title').val('');
+		$('#message-text').val('');
+	}
+
+	$('.trigger-of-work-card').on('click', function(){
+		var workWebsite = $(this).find('.link-of-work-card').attr('href');
+		window.open(workWebsite);
+	});
+
+	var whatsAppLink = 'https://web.whatsapp.com/send?phone=5541984320432';
+	$('.open-whatsapp').on('click', function(){
+		window.open(whatsAppLink);
+	});
+</script>
