@@ -95,11 +95,8 @@ footer{
 	width: 45%;
 }
 .wrapper input, textarea{
-	width: 90%;
-	margin-top: 2%;
-	margin-bottom: 2%;
 	border: #fff;
-	padding: 5px;
+	text-indent: 5px;
 }
 .send-button{
 	color: #fff;
