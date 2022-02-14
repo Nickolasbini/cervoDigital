@@ -594,7 +594,7 @@
 		window.open(workWebsite);
 	});
 
-	var whatsAppLink = 'https://web.whatsapp.com/send?phone=5541984320432';
+	var whatsAppLink = 'https://api.whatsapp.com/send?text=Olá&phone=5541984320432';
 	$('.open-whatsapp').on('click', function(){
 		window.open(whatsAppLink);
 	});
@@ -608,6 +608,10 @@
 	$('.wrapper-of-card').on('click', function(){
 		var linkToGo = $(this).attr('attr-site-link');
 		window.open(linkToGo);
+	});
+
+	$('.action-button').on('click', function(){
+		window.open(whatsAppLink);
 	});
 </script>
 
