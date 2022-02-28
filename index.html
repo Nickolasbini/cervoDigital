@@ -26,371 +26,383 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-	<!-- NAVBAR -->
-	<nav class="navbar navbar-expand-sm navbar-light fixed-top responsible responsible-navbar">
-        <div class="container-fluid row nav-bar-items">
-            <div class="col-sm-1">
-                <a class="navbar-brand"><h5 class="translate">Agência Cervo Digital</h5></a>
-                <button type="button" class="navbar-toggler float-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="col-sm-7">
-                <div id="navbarCollapse" class="collapse navbar-collapse">
-                    <ul id="responsive-menu" class="nav navbar-nav col justify-content-between">
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="window.scrollTo(0, 0)" class="translate">Sobre Nos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a dataGoTo="services" class="nav-link" class="translate">Serviços</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a dataGoTo="clients" class="nav-link" class="translate">Clientes</a>
-                        </li>
-						<li class="nav-item dropdown">
-                            <a dataGoTo="blog" class="nav-link" class="translate">Blog</a>
-                        </li>
-						<li class="nav-item dropdown">
-                            <a dataGoTo="contact-footer" class="nav-link" class="translate">Entre em contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>    
 
-	<section id="top-of-page" class="bg-img">
-		<div class="container pt-5">
-			<div class="col sm-center-text">
-				<div class="col-sm-10 col-md-8 primary-color p-2">
-					<h1 class="translate">Agência de Desenvolvimento de sites e  Marketing Digital</h1>
+<body>
+	<div class="loader-of-page">
+		<div class="container d-flex justify-content-center mt-5">
+			<div class="loader"></div>
+		</div>
+		<p class="container text-center mt-5 h2 translate">
+			O site está carregando
+		</p>
+	</div>
+	
+	<div class="all-page-data" style="display:none;">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-expand-sm navbar-light fixed-top responsible responsible-navbar">
+			<div class="container-fluid row nav-bar-items">
+				<div class="col-sm-1">
+					<a class="navbar-brand"><h5 class="translate">Agência Cervo Digital</h5></a>
+					<button type="button" class="navbar-toggler float-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 				</div>
-				<div class="col-sm-10 col-md-8 primary-color p-2">
-					<h2 class="translate">Tenha sites profissionais e maior alcançe de vendas !</h2>
-				</div>
-				<div class="col-sm-5 col-md-4 p-3 mt-2 highlighted-button bg-dark center-text rounded action-button translate" style="border: unset;">
-					QUERO UM ORÇAMENTO
+				<div class="col-sm-7">
+					<div id="navbarCollapse" class="collapse navbar-collapse">
+						<ul id="responsive-menu" class="nav navbar-nav col justify-content-between">
+							<li class="nav-item">
+								<a class="nav-link" onclick="window.scrollTo(0, 0)" class="translate">Sobre Nos</a>
+							</li>
+							<li class="nav-item">
+								<a dataGoTo="services" class="nav-link" class="translate">Serviços</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a dataGoTo="clients" class="nav-link" class="translate">Clientes</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a dataGoTo="blog" class="nav-link" class="translate">Blog</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a dataGoTo="contact-footer" class="nav-link" class="translate">Entre em contato</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</nav>    
 
-	<section id="second-section">
-		<div class="container mt-5 mb-5">
-			<div class="row d-flex justify-content-around">
-				<div class="col-sm-10 col-md-3 align-self-center center-text">
-					<img class="img-fluid perfect-rounded" src="images/logo.webp" width="350" alt="logo">
+		<section id="top-of-page" class="bg-img">
+			<div class="container pt-5">
+				<div class="col sm-center-text">
+					<div class="col-sm-10 col-md-8 primary-color p-2">
+						<h1 class="translate">Agência de Desenvolvimento de sites e  Marketing Digital</h1>
+					</div>
+					<div class="col-sm-10 col-md-8 primary-color p-2">
+						<h2 class="translate">Tenha sites profissionais e maior alcançe de vendas !</h2>
+					</div>
+					<div class="col-sm-5 col-md-4 p-3 mt-2 highlighted-button bg-dark center-text rounded action-button translate" style="border: unset;">
+						QUERO UM ORÇAMENTO
+					</div>
 				</div>
-				<div class="col-sm-10 col-md-6 sm-center-text">
-					<div class="col">
-						<h2 class="translate">
-							O que é a Cervo Digital?
-						</h2>
-						<p class="blue translate">
-							Somos uma agência especializada em desenvolvimento de sites, aplicações web e marketing digital
-						</p>
-						<p class="translate">
-							Todos os negócios, independente do ramo, necesitam atualmente de personalidade e de marketing digital para continuar a crescer e prosperar, e com a Cervo Digital você consegue de forma fácil, profissional e rápida
-						</p>
-						<p class="translate">
-							Visamos entregar para a sua empresa:
-						</p>
-						<div class="content-with-image p-4 rounded-95 text-left">
-							<ul>
-								<li class="highlight p-2">
-									<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Personalidade e diferencial</div>
-								</li>
-								<li class="highlight p-2">
-									<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Presença e renome</div>
-								</li>
-								<li class="highlight p-2">
-									<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Expanção do seu networking e clientes</div>
-								</li>
-								<li class="highlight p-2">
-									<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Agregar valor</div>
-								</li>
-							</ul>
+			</div>
+		</section>
+
+		<section id="second-section">
+			<div class="container mt-5 mb-5">
+				<div class="row d-flex justify-content-around">
+					<div class="col-sm-10 col-md-3 align-self-center center-text">
+						<img class="img-fluid perfect-rounded" src="images/logo.webp" width="350" alt="logo">
+					</div>
+					<div class="col-sm-10 col-md-6 sm-center-text">
+						<div class="col">
+							<h2 class="translate">
+								O que é a Cervo Digital?
+							</h2>
+							<p class="blue translate">
+								Somos uma agência especializada em desenvolvimento de sites, aplicações web e marketing digital
+							</p>
+							<p class="translate">
+								Todos os negócios, independente do ramo, necesitam atualmente de personalidade e de marketing digital para continuar a crescer e prosperar, e com a Cervo Digital você consegue de forma fácil, profissional e rápida
+							</p>
+							<p class="translate">
+								Visamos entregar para a sua empresa:
+							</p>
+							<div class="content-with-image p-4 rounded-95 text-left">
+								<ul>
+									<li class="highlight p-2">
+										<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Personalidade e diferencial</div>
+									</li>
+									<li class="highlight p-2">
+										<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Presença e renome</div>
+									</li>
+									<li class="highlight p-2">
+										<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Expanção do seu networking e clientes</div>
+									</li>
+									<li class="highlight p-2">
+										<img src="images/check-icon.webp" alt="icon" width="350"><div class="translate">Agregar valor</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="services" class="services mt-5 mb-5">
-		<h1>Serviços</h1>
-		<p class="translate">
-			Em meio ao mundo digital, todos os tipos serviços tem a sua própia importancia e objetivo.
-		</p>
-		<div class="cards-wrapper">
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/web-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card" class="translate">
-						Criação de sites
-					</h6>
+		<section id="services" class="services mt-5 mb-5">
+			<h1>Serviços</h1>
+			<p class="translate">
+				Em meio ao mundo digital, todos os tipos serviços tem a sua própia importancia e objetivo.
+			</p>
+			<div class="cards-wrapper">
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/web-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card" class="translate">
+							Criação de sites
+						</h6>
+					</div>
+					<div class="card-body" class="translate">
+						Criamos, atualizamos e desenvolvemos sites profissionais, agradáveis e harmônicos
+					</div>
 				</div>
-				<div class="card-body" class="translate">
-					Criamos, atualizamos e desenvolvemos sites profissionais, agradáveis e harmônicos
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/landingpage-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card">
+							Landing Pages
+						</h6>
+					</div>
+					<div class="card-body translate">
+						Desenvolvemos uma página única para captar leads e potênciais clientes
+					</div>
+				</div>
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/ecommerce-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card">
+							E-commerce
+						</h6>
+					</div>
+					<div class="card-body translate">
+						Vendas online são muito lucrativas e, tendo um e-commerce você vende online 24 horas por dia todos os dias
+					</div>
+				</div>
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/socialmedia-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card translate">
+							Gestão de midias sociais
+						</h6>
+					</div>
+					<div class="card-body translate">
+						Gerenciamos sua rede social afim de criar uma personalidade forte e reconhecida
+					</div>
+				</div>
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/design-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card translate">
+							Suporte analítico e criativo
+						</h6>
+					</div>
+					<div class="card-body">
+						Artes para postagem, idéias criativas para frases de efeito real
+					</div>
+				</div>
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/adwords-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card">
+							Google Ads
+						</h6>
+					</div>
+					<div class="card-body translate">
+						Implementação e consultoria de tráfego pago
+					</div>
+				</div>
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/seo-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card">
+							SEO
+						</h6>
+					</div>
+					<div class="card-body translate">
+						Esteja no topo de buscas na internet
+					</div>
+				</div>
+				<div class="card fast-transition zoom-in">
+					<div class="card-top">
+						<img src="images/webapp-icon.webp" alt="icon" width="350">
+						<h6 class="title-of-card translate">
+							Aplicação Web
+						</h6>
+					</div>
+					<div class="card-body translate">
+						Pensou em uma aplicação web própia e com a sua cara? Então podemos te ajudar
+					</div>
 				</div>
 			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/landingpage-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card">
-						Landing Pages
-					</h6>
-				</div>
-				<div class="card-body translate">
-					Desenvolvemos uma página única para captar leads e potênciais clientes
-				</div>
-			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/ecommerce-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card">
-						E-commerce
-					</h6>
-				</div>
-				<div class="card-body translate">
-					Vendas online são muito lucrativas e, tendo um e-commerce você vende online 24 horas por dia todos os dias
+		</section>
+
+		<section id="blog">
+			<div class="container-fluid mt-5 mb-t p-5 bg-primary-color">
+				<div class="row d-flex sm-center-text">
+					<div class="col-sm-4 col-md-6 md-margin-left-5">
+						<p class="medium-font translate">Tem interesse em um de nossos serviços?</p>
+						<p class="translate">Nos podemos te ajudar a vender ou agregar valor</p>
+						<p class="translate">Entre em contato</p>				
+					</div>
+					<div class="col-sm-5 m-auto col-md-4 p-3 highlighted-button bg-dark center-text rounded action-button translate">
+						Quero um orçamento grátis
+					</div>
 				</div>
 			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/socialmedia-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card translate">
-						Gestão de midias sociais
-					</h6>
-				</div>
-				<div class="card-body translate">
-					Gerenciamos sua rede social afim de criar uma personalidade forte e reconhecida
-				</div>
-			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/design-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card translate">
-						Suporte analítico e criativo
-					</h6>
-				</div>
-				<div class="card-body">
-					Artes para postagem, idéias criativas para frases de efeito real
+			<div class="container">
+				<div class="row pt-5 pb-5 sm-center-text ">
+					<div class="col-sm-10 col-md-6">
+						<img class="img-fluid rounded" src="images/blog-image.webp" alt="icon" width="350">
+					</div>
+					<div class="col-sm-10 col-md-6 m-auto sm-mt-5 pt-5 pb-5">
+						<h4 class="bigger-font translate">Por quê ter um site ou marketing digital?</h4>
+						<p class="small-font translate">
+							Vivemos em um momento prospero da internet que proporciona diversos benefícios e facilidades. Hoje, o fato de ter a sua empresa no meio digital se tornou imprescindível, uma necessidade real. Já pensou em atrair novos clientes por meio do Google ou por suas redes sociais? Mostrando profissionalidade, transparência e confiança? 
+						</p>
+						<p class="small-font translate">
+							Para crescer nos dias de hoje, é necessário se adequar ao futuro, mas não se esqueça de que 'para criar o futuro, você deve cria-lo'. Nos queremos te ajudar.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/adwords-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card">
-						Google Ads
-					</h6>
-				</div>
-				<div class="card-body translate">
-					Implementação e consultoria de tráfego pago
-				</div>
-			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/seo-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card">
-						SEO
-					</h6>
-				</div>
-				<div class="card-body translate">
-					Esteja no topo de buscas na internet
-				</div>
-			</div>
-			<div class="card fast-transition zoom-in">
-				<div class="card-top">
-					<img src="images/webapp-icon.webp" alt="icon" width="350">
-					<h6 class="title-of-card translate">
+		</section>
+
+		<section id="clients" class="container mt-5">
+			<h4 class="bigger-font center-text mt-5 mb-5 translate">Clientes e Trabalhos</h4>
+			<div class="col d-flex justify-content-around" style="flex-wrap: wrap;">
+				<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="https://www.traposeretalhos.com/">
+					<div class="overlay-of-work" style="display: none;">
+						<a href="https://www.traposeretalhos.com/" target="_blank" class="link-of-work-card">https://wwww.traposeretalhos.com</a>
+					</div>
+					<div class="card-title p-2 translate">
 						Aplicação Web
-					</h6>
+					</div>
+					<div class="w-100 target-image">
+						<img class="img-fluid" width="350" src="works/traposeretalhos-site-preview.webp" alt="work">
+					</div>
+					<div class="p-2" title="Ver site">
+						<img src="resourses/icon/eye.svg" alt="icon" width="25">
+					</div>
 				</div>
-				<div class="card-body translate">
-					Pensou em uma aplicação web própia e com a sua cara? Então podemos te ajudar
+				<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="https://beautyboutique.confere.shop">
+					<div class="card-title p-2">
+						E-commerce
+					</div>
+					<div class="w-100 target-image">
+						<img class="img-fluid"  width="350" src="works/beautyboutique-site-preview.webp" alt="work">
+					</div>
+					<div class="p-2" title="Ver site">
+						<img src="resourses/icon/eye.svg" alt="icon" width="25">
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="blog">
-		<div class="container-fluid mt-5 mb-t p-5 bg-primary-color">
-			<div class="row d-flex sm-center-text">
-				<div class="col-sm-4 col-md-6 md-margin-left-5">
-					<p class="medium-font translate">Tem interesse em um de nossos serviços?</p>
-					<p class="translate">Nos podemos te ajudar a vender ou agregar valor</p>
-					<p class="translate">Entre em contato</p>				
-				</div>
-				<div class="col-sm-5 m-auto col-md-4 p-3 highlighted-button bg-dark center-text rounded action-button translate">
-					Quero um orçamento grátis
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row pt-5 pb-5 sm-center-text ">
-				<div class="col-sm-10 col-md-6">
-					<img class="img-fluid rounded" src="images/blog-image.webp" alt="icon" width="350">
-				</div>
-				<div class="col-sm-10 col-md-6 m-auto sm-mt-5 pt-5 pb-5">
-					<h4 class="bigger-font translate">Por quê ter um site ou marketing digital?</h4>
-					<p class="small-font translate">
-						Vivemos em um momento prospero da internet que proporciona diversos benefícios e facilidades. Hoje, o fato de ter a sua empresa no meio digital se tornou imprescindível, uma necessidade real. Já pensou em atrair novos clientes por meio do Google ou por suas redes sociais? Mostrando profissionalidade, transparência e confiança? 
-					</p>
-					<p class="small-font translate">
-						Para crescer nos dias de hoje, é necessário se adequar ao futuro, mas não se esqueça de que 'para criar o futuro, você deve cria-lo'. Nos queremos te ajudar.
-					</p>
+		<section>
+			<div class="container-fluid mt-5 mb-t p-5 bg-primary-color">
+				<div class="row d-flex sm-center-text">
+					<div class="col-sm-4 col-md-6 md-margin-left-5">
+						<p class="medium-font translate">Solicite um orçamento</p>
+						<p class="translate">Domine seu espaço digital, venda mais e alcançe seus clientes</p>	
+					</div>
+					<div class="col-sm-5 m-auto col-md-4 p-3 highlighted-button bg-dark center-text rounded action-button translate">
+						Quero um orçamento grátis
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="clients" class="container mt-5">
-		<h4 class="bigger-font center-text mt-5 mb-5 translate">Clientes e Trabalhos</h4>
-		<div class="col d-flex justify-content-around" style="flex-wrap: wrap;">
-			<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="https://www.traposeretalhos.com/">
-				<div class="overlay-of-work" style="display: none;">
-					<a href="https://www.traposeretalhos.com/" target="_blank" class="link-of-work-card">https://wwww.traposeretalhos.com</a>
+		<section id="questions" class="container mt-5 mb-5">
+			<h4 class="bigger-font center-text translate">Dúvidas frequentes</h4>
+			<p class="small-font center-text translate">
+				Informações possivelmente úteis para você
+			</p>
+			<div class="questions-box">
+				<div class="question-wrapper">
+					<div class="small-font question center-with-flex translate">
+						O que é um dominio e por que preciso de um?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+					</div>
+					<div class="small-font question-answer hidden translate">
+						O domínio é a forma que seu site se chama, é por esse nome que ferramentas de busca como o Google conseguem encontrar sites de acordo com o que é escrito na busca.
+					</div>
 				</div>
-				<div class="card-title p-2 translate">
-					Aplicação Web
+				<div class="question-wrapper">
+					<div class="small-font question center-with-flex translate">
+						Tenho ou comprei um domínio, o que mais preciso agora?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+					</div>
+					<div class="small-font question-answer hidden translate">
+						Para o seu site estar funcionando você vai precisar de uma hospedagem. Pense nisso como o aluguel de um espaço, nesse caso um espaço na internet. Com essas duas coisas já podemos começar a criar a sua história.
+					</div>
 				</div>
-				<div class="w-100 target-image">
-					<img class="img-fluid" width="350" src="works/traposeretalhos-site-preview.webp" alt="work">
+				<div class="question-wrapper">
+					<div class="small-font question center-with-flex translate">
+						O que é gestão de midias sociais e porquê isso é importante?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+					</div>
+					<div class="small-font question-answer hidden translate">
+						Com o avanço da internet, a cada dias estamos mais e mais conectados uns com os outros. Fazemos conexões de diversas formas mas em geral, as redes sociais são as responsáveis pelas maiorias das conexões. A gestão de midias sociais se trata de estratêgias aplicadas por profissionais para assegurar que a sua rede social prospere e atrai novos clientes e leads. 
+					</div>
 				</div>
-				<div class="p-2" title="Ver site">
-					<img src="resourses/icon/eye.svg" alt="icon" width="25">
+				<div class="question-wrapper">	
+					<div class="small-font question center-with-flex translate">
+						Qual é a direfença entre um site e uma landing page?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
+					</div>
+					<div class="small-font question-answer hidden translate">
+						Um site possui várias páginas que trazem informações a respeito de um negócio, em geral com informações a respeito de produtos, contatos ou outras informações relevantes a aquele negocio. Uma Landing Page é um site de uma única página, tem como objetivo converter novos clientes e leads, podem também destacar um produto ou serviço de um negócio em uma única página.
+					</div>
 				</div>
 			</div>
-			<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="https://beautyboutique.confere.shop">
-				<div class="card-title p-2">
-					E-commerce
-				</div>
-				<div class="w-100 target-image">
-					<img class="img-fluid"  width="350" src="works/beautyboutique-site-preview.webp" alt="work">
-				</div>
-				<div class="p-2" title="Ver site">
-					<img src="resourses/icon/eye.svg" alt="icon" width="25">
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
 
-	<section>
-		<div class="container-fluid mt-5 mb-t p-5 bg-primary-color">
-			<div class="row d-flex sm-center-text">
-				<div class="col-sm-4 col-md-6 md-margin-left-5">
-					<p class="medium-font translate">Solicite um orçamento</p>
-					<p class="translate">Domine seu espaço digital, venda mais e alcançe seus clientes</p>	
+		<footer class="container-fluid p-5">
+			<div class="row d-flex justify-content-between">
+				<div class="col-sm-1 col-md-2 left-text mt-3 mb-3 sm-center-text">
+					<img class="img-fluid perfect-rounded sm-w-50" src="images/logo.webp" width="350" alt="logo">
+					<h1 class="small-font regular-font">Cervo Digital</h1>
+					<h4 class="small-font regular-font translate">Agência de desenvolvimento web e de marketing digital</h4>
 				</div>
-				<div class="col-sm-5 m-auto col-md-4 p-3 highlighted-button bg-dark center-text rounded action-button translate">
-					Quero um orçamento grátis
+				<div class="col-sm-5 col-md-4 mt-3 mb-3 sm-center-text">
+					<h1 class="medium-font translate">Nossos canais</h1>
+					<div class="social-media-icons pt-4 pb-4">
+						<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank"><img id="whatsapp" src="images/whatsapp-gray.svg" title="ver whatsapp" alt="icon" width="350"></a>
+						<a href="https://www.instagram.com/cervodigital_/" target="_blank"><img id="instagram" src="images/instagram-gray.svg" title="ver instagram" alt="icon" width="350"></a>
+						<a href="https://www.facebook.com/cervo.digital" target="_blank"><img id="facebook" src="images/facebook-gray.svg" title="ver facebook" alt="icon" width="350"></a>
+					</div>
+					<p class="small-font translate">Brasil</p>
+					<p class="small-font translate">Avenida Archelau de Almeida Torres | Araucária, PR</p>
+					<p class="small-font">WhatsApp: +55 41 9 8432-0432</p>
+					<p class="small-font">Email: cervodigital@hotmail.com</p>
+				</div>
+				<div class="col-sm-5 col-md-5 mt-3 mb-3 sm-center-text">
+					<h2 class="medium-font translate">Envie uma mensagem</h2>
+					<h4 class="small-font translate">Se tiver alguma dúvida, entre em contato para podermos resolver sua dúvida</h4>
+					<div class="wrapper pt-3 pb-3">
+						<input type="email" id="email" placeholder="Email" class="w-100 translate-placeholder">
+					</div>
+					<div class="wrapper pt-3 pb-3">
+						<input type="text" id="name" placeholder="Nome" class="w-100 translate-placeholder">
+					</div>
+					<div class="wrapper pt-3 pb-3">
+						<input type="text" id="message-title" placeholder="Titulo da Mensagem" class="w-100 translate-placeholder">
+					</div>
+					<div class="wrapper pt-3 pb-3">
+						<textarea type="text" id="message-text" placeholder="Mensagem" class="w-100 translate-placeholder"></textarea>
+					</div>
+					<div class="wrapper pt-3 pb-3 send-button fast-transition w-50" title="Enviar mensagem">
+						Enviar
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</footer>
 
-	<section id="questions" class="container mt-5 mb-5">
-		<h4 class="bigger-font center-text translate">Dúvidas frequentes</h4>
-		<p class="small-font center-text translate">
-			Informações possivelmente úteis para você
-		</p>
-		<div class="questions-box">
-			<div class="question-wrapper">
-				<div class="small-font question center-with-flex translate">
-					O que é um dominio e por que preciso de um?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
-				</div>
-				<div class="small-font question-answer hidden translate">
-					O domínio é a forma que seu site se chama, é por esse nome que ferramentas de busca como o Google conseguem encontrar sites de acordo com o que é escrito na busca.
-				</div>
+		<section id="contact-footer">
+			<div class="company-info container center-text">
+				<div class="cnpj" style="display: none;">Company CNPJ</div>
+				<div translate>© Copyright agência cervo digital. 2021 - Todos os direitos reservados</div>
 			</div>
-			<div class="question-wrapper">
-				<div class="small-font question center-with-flex translate">
-					Tenho ou comprei um domínio, o que mais preciso agora?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
-				</div>
-				<div class="small-font question-answer hidden translate">
-					Para o seu site estar funcionando você vai precisar de uma hospedagem. Pense nisso como o aluguel de um espaço, nesse caso um espaço na internet. Com essas duas coisas já podemos começar a criar a sua história.
-				</div>
-			</div>
-			<div class="question-wrapper">
-				<div class="small-font question center-with-flex translate">
-					O que é gestão de midias sociais e porquê isso é importante?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
-				</div>
-				<div class="small-font question-answer hidden translate">
-					Com o avanço da internet, a cada dias estamos mais e mais conectados uns com os outros. Fazemos conexões de diversas formas mas em geral, as redes sociais são as responsáveis pelas maiorias das conexões. A gestão de midias sociais se trata de estratêgias aplicadas por profissionais para assegurar que a sua rede social prospere e atrai novos clientes e leads. 
-				</div>
-			</div>
-			<div class="question-wrapper">	
-				<div class="small-font question center-with-flex translate">
-					Qual é a direfença entre um site e uma landing page?<span class="question-icon"><i class="fas fa-caret-down"></i></span>
-				</div>
-				<div class="small-font question-answer hidden translate">
-					Um site possui várias páginas que trazem informações a respeito de um negócio, em geral com informações a respeito de produtos, contatos ou outras informações relevantes a aquele negocio. Uma Landing Page é um site de uma única página, tem como objetivo converter novos clientes e leads, podem também destacar um produto ou serviço de um negócio em uma única página.
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
 
-	<footer class="container-fluid p-5">
-		<div class="row d-flex justify-content-between">
-			<div class="col-sm-1 col-md-2 left-text mt-3 mb-3 sm-center-text">
-				<img class="img-fluid perfect-rounded sm-w-50" src="images/logo.webp" width="350" alt="logo">
-				<h1 class="small-font regular-font">Cervo Digital</h1>
-				<h4 class="small-font regular-font translate">Agência de desenvolvimento web e de marketing digital</h4>
-			</div>
-			<div class="col-sm-5 col-md-4 mt-3 mb-3 sm-center-text">
-				<h1 class="medium-font translate">Nossos canais</h1>
-				<div class="social-media-icons pt-4 pb-4">
-					<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank"><img id="whatsapp" src="images/whatsapp-gray.svg" title="ver whatsapp" alt="icon" width="350"></a>
-					<a href="https://www.instagram.com/cervodigital_/" target="_blank"><img id="instagram" src="images/instagram-gray.svg" title="ver instagram" alt="icon" width="350"></a>
-					<a href="https://www.facebook.com/cervo.digital" target="_blank"><img id="facebook" src="images/facebook-gray.svg" title="ver facebook" alt="icon" width="350"></a>
-				</div>
-				<p class="small-font translate">Brasil</p>
-				<p class="small-font translate">Avenida Archelau de Almeida Torres | Araucária, PR</p>
-				<p class="small-font">WhatsApp: +55 41 9 8432-0432</p>
-				<p class="small-font">Email: cervodigital@hotmail.com</p>
-			</div>
-			<div class="col-sm-5 col-md-5 mt-3 mb-3 sm-center-text">
-				<h2 class="medium-font translate">Envie uma mensagem</h2>
-				<h4 class="small-font translate">Se tiver alguma dúvida, entre em contato para podermos resolver sua dúvida</h4>
-				<div class="wrapper pt-3 pb-3">
-					<input type="email" id="email" placeholder="Email" class="w-100 translate-placeholder">
-				</div>
-				<div class="wrapper pt-3 pb-3">
-					<input type="text" id="name" placeholder="Nome" class="w-100 translate-placeholder">
-				</div>
-				<div class="wrapper pt-3 pb-3">
-					<input type="text" id="message-title" placeholder="Titulo da Mensagem" class="w-100 translate-placeholder">
-				</div>
-				<div class="wrapper pt-3 pb-3">
-					<textarea type="text" id="message-text" placeholder="Mensagem" class="w-100 translate-placeholder"></textarea>
-				</div>
-				<div class="wrapper pt-3 pb-3 send-button fast-transition w-50" title="Enviar mensagem">
-					Enviar
-				</div>
-			</div>
+		<div class="fixed-button whatsapp-btn">
+			<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank" class="whats-link"><img id="whatsapp" src="images/whatsapp.svg" title="ver whatsapp" alt="icon" width="350"></a>
 		</div>
-	</footer>
-
-	<section id="contact-footer">
-		<div class="company-info container center-text">
-			<div class="cnpj" style="display: none;">Company CNPJ</div>
-			<div translate>© Copyright agência cervo digital. 2021 - Todos os direitos reservados</div>
+		<div class="fixed-button go-up" style="display:none;">
+			<a href="#top-of-page">
+				<i class="fa fa-chevron-up"></i>
+			</a>
 		</div>
-	</section>
 
-	<div class="fixed-button whatsapp-btn">
-		<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank" class="whats-link"><img id="whatsapp" src="images/whatsapp.svg" title="ver whatsapp" alt="icon" width="350"></a>
+		<div id="messager"></div>
+		<div id="maintancePage"></div>
 	</div>
-	<div class="fixed-button go-up" style="display:none;">
-		<a href="#top-of-page">
-			<i class="fa fa-chevron-up"></i>
-		</a>
-	</div>
-
-	<div id="messager"></div>
-	<div id="maintancePage"></div>
 </body>
 </html>
 
@@ -421,6 +433,8 @@
 		getPositions();
 		resizeByJS();
 		translateSystem();
+		$('.loader-of-page').hide();
+		$('.all-page-data').show();
 	});
 
 	// detect when the window resizes
