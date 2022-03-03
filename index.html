@@ -14,7 +14,7 @@
 	<!-- importing jquery -->
 	<script src="resourses/jquery/jquery-3.5.1.js"></script>
 	<!-- importing Toast -->
-	<link href="resourses/messager-toast.css" rel="stylesheet"></link>
+	<link href="resourses/messager-toast.css" rel="stylesheet" async></link>
 
 	<!-- Bootstrap related -->	
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -641,6 +641,7 @@
 
 	var userLanguage = 'pt';
 	function translateSystem(){
+		console.log('here');
 		getUserLanguage();
 		// translate first tags using the 'translate' class
 		var translateTags = $('.translate');
