@@ -6,15 +6,17 @@
 	<meta name="keywords" content="agência digital, site, website, agency">
 	<meta name="author" content="Nickolas Bini">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cervo Digital</title>
+	<title>cervo digital</title>
 	<link rel="icon" href="images/favicon.webp">
 
 	<!-- importing CSS -->
 	<link href="resourses/stylesheet.css" rel="stylesheet"></link>
 	<!-- importing jquery -->
 	<script src="resourses/jquery/jquery-3.5.1.js"></script>
+	<!-- importing FontAwesome -->
+	<link href="resourses/fontawesome/css/all.css" rel="stylesheet"></link>
 	<!-- importing Toast -->
-	<link href="resourses/messager-toast.css" rel="stylesheet" async></link>
+	<link href="resourses/messager-toast.css" rel="stylesheet"></link>
 
 	<!-- Bootstrap related -->	
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -394,7 +396,7 @@
 		</div>
 		<div class="fixed-button go-up" style="display:none;">
 			<a href="#top-of-page">
-				<i class="fa fa-chevron-up"></i>
+				<img src="resourses/icon/arrow-up.svg" class="pt-2" style="width: 25px;">
 			</a>
 		</div>
 
@@ -403,12 +405,15 @@
 	</div>
 </body>
 </html>
+
+<script type="text/javascript" src="resourses/messager-toast.js"></script>
 <script type="text/javascript">
 	// gets data of translation file 
 	var allTranslations = null;
 	function readTranslationsJSONFile(file = 'translations.json')
 	{
 		var rawFile = new XMLHttpRequest();
+		rawFile.open("GET", file, false);
 		rawFile.onreadystatechange = function ()
 		{
 			if(rawFile.readyState === 4)
@@ -419,8 +424,7 @@
 				}
 			}
 		}
-		rawFile.open("GET", file, false);
-		rawFile.send();
+		rawFile.send(null);
 	}
 	readTranslationsJSONFile();
 
@@ -641,7 +645,6 @@
 
 	var userLanguage = 'pt';
 	function translateSystem(){
-		console.log('here');
 		getUserLanguage();
 		// translate first tags using the 'translate' class
 		var translateTags = $('.translate');
