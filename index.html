@@ -23,15 +23,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" async>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" async></script>
 </head>
-
 <body>
-	<div class="loader-of-page">
-		<div class="container d-flex justify-content-center mt-5">
-			<div class="loader"></div>
+	<div id="languages-modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content d-flex flex-row justify-content-around p-4">
+				<a class="icon" data-toggle="tooltip" data-placement="top" title="English" data-languageISO="en"><img src="resourses/icon/en.svg"></a>
+				<a class="icon" data-toggle="tooltip" data-placement="top" title="Português" data-languageISO="pt"><img src="resourses/icon/pt.svg"></a>
+				<!--<a class="icon" data-toggle="tooltip" data-placement="top" title="Espanol" data-languageISO="es"><img src="resourses/icon/es.svg"></a>-->
+			</div>
 		</div>
-		<p class="container text-center mt-5 h2 translate">
-			O site está carregando
-		</p>
 	</div>
 	
 	<div class="all-page-data" style="display:none;">
@@ -61,6 +61,9 @@
 							</li>
 							<li class="nav-item dropdown">
 								<a dataGoTo="contact-footer" class="nav-link" class="translate">Entre em contato</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link translate social-media-icons" id="changeLanguageFlag"><img src="resourses/icon/pt.svg" style="pointer-events:none;"></a>
 							</li>
 						</ul>
 					</div>
@@ -127,7 +130,7 @@
 		</section>
 
 		<section id="services" class="services mt-5 mb-5">
-			<h1>Serviços</h1>
+			<h1 class="translate">Serviços</h1>
 			<p class="translate">
 				Em meio ao mundo digital, todos os tipos serviços tem a sua própia importancia e objetivo.
 			</p>
@@ -374,7 +377,7 @@
 					<div class="wrapper pt-3 pb-3">
 						<textarea type="text" id="message-text" placeholder="Mensagem" class="w-100 translate-placeholder"></textarea>
 					</div>
-					<div class="wrapper pt-3 pb-3 send-button fast-transition w-50" title="Enviar mensagem">
+					<div class="wrapper pt-3 pb-3 send-button fast-transition w-50" title="Enviar mensagem" translate>
 						Enviar
 					</div>
 				</div>
@@ -384,7 +387,7 @@
 		<section id="contact-footer">
 			<div class="company-info container center-text">
 				<div class="cnpj" style="display: none;">Company CNPJ</div>
-				<div translate>© Copyright agência cervo digital. 2021 - Todos os direitos reservados</div>
+				<div class="translate">© Copyright agência cervo digital. 2021 - Todos os direitos reservados</div>
 			</div>
 		</section>
 
@@ -405,6 +408,10 @@
 
 <script type="text/javascript" src="resourses/messager-toast.js"></script>
 <script type="text/javascript">
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+
 	// gets data of translation file 
 	var allTranslations = null;
 	function readTranslationsJSONFile(file = 'translations.json')
@@ -423,7 +430,7 @@
 		}
 		rawFile.send(null);
 	}
-	readTranslationsJSONFile();
+	//readTranslationsJSONFile();
 
 	var screenSize = 0;
 	$(document).ready(function(){
@@ -432,6 +439,7 @@
 		translateSystem();
 		$('.loader-of-page').hide();
 		$('.all-page-data').show();
+		$('#languages-modal').modal('show');
 	});
 
 	// detect when the window resizes
@@ -655,7 +663,7 @@
 			try{
 				var translatedText = allTranslations[text][userLanguage];
 			}catch{
-				console.log('could not found: '+text);
+
 			}
 			if(translatedText == ''){
 				translatedText = allTranslations[text]['pt'];
@@ -670,7 +678,7 @@
 			try{
 				var translatedText = allTranslations[placeholder][userLanguage];
 			}catch{
-				console.log('could not found: '+placeholder);
+
 			}
 			if(translatedText == ''){
 				translatedText = allTranslations[placeholder]['pt'];
@@ -694,5 +702,16 @@
 		}
 		var scrollTo = $("#"+goTo).offset().top;
 		$(document).scrollTop(scrollTo);
+	});
+
+	$('.icon img').on('click', function(){
+		userLanguage = $(this).parent().attr('data-languageISO');
+		translateSystem(userLanguage);
+		$('#languages-modal').modal('hide');
+		$('#changeLanguageFlag').find('img').attr('src', 'resourses/icon/'+ userLanguage + '.svg');
+	});
+
+	$('#changeLanguageFlag').on('click', function(){
+		$('#languages-modal').modal('show');
 	});
 </script>
