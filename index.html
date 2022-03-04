@@ -641,8 +641,12 @@
 	});
 
 	var userLanguage = 'pt';
-	function translateSystem(){
-		getUserLanguage();
+	function translateSystem(languageISO = null){
+		if(languageISO == null){
+			getUserLanguage();
+		}else{
+			userLanguage = languageISO;
+		}
 		// translate first tags using the 'translate' class
 		var translateTags = $('.translate');
 		translateTags.each(function(){
