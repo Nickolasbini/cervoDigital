@@ -722,7 +722,6 @@
 
 	$('.icon img').on('click', function(){
 		userLanguage = $(this).parent().attr('data-languageISO');
-		console.log(userLanguage);
 		translateSystem(userLanguage);
 		$('#languages-modal').modal('hide');
 		$('#changeLanguageFlag').find('img').attr('src', 'resourses/icon/'+ userLanguage + '.svg');
