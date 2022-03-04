@@ -48,7 +48,7 @@
 					<div id="navbarCollapse" class="collapse navbar-collapse">
 						<ul id="responsive-menu" class="nav navbar-nav col justify-content-between">
 							<li class="nav-item">
-								<a class="nav-link" onclick="window.scrollTo(0, 0)" class="translate">Sobre Nos</a>
+								<a class="nav-link translate" onclick="window.scrollTo(0, 0)" class="translate">Sobre Nos</a>
 							</li>
 							<li class="nav-item">
 								<a dataGoTo="services" class="nav-link translate">Serviços</a>
@@ -377,7 +377,7 @@
 					<div class="wrapper pt-3 pb-3">
 						<textarea type="text" id="message-text" placeholder="Mensagem" class="w-100 translate-placeholder"></textarea>
 					</div>
-					<div class="wrapper pt-3 pb-3 send-button fast-transition w-50" title="Enviar mensagem" translate>
+					<div class="wrapper pt-3 pb-3 send-button fast-transition w-50 translate" title="Enviar mensagem">
 						Enviar
 					</div>
 				</div>
@@ -430,13 +430,13 @@
 		}
 		rawFile.send(null);
 	}
-	readTranslationsJSONFile();
+	//readTranslationsJSONFile();
 
 	var screenSize = 0;
 	$(document).ready(function(){
 		getPositions();
 		resizeByJS();
-		translateSystem();
+		translateSystem(null, true);
 		$('.loader-of-page').hide();
 		$('.all-page-data').show();
 		$('#languages-modal').modal('show');
@@ -649,7 +649,7 @@
 	});
 
 	var userLanguage = 'pt';
-	function translateSystem(languageISO = null){
+	function translateSystem(languageISO = null, ignore = null){
 		if(languageISO == null){
 			getUserLanguage();
 		}else{
@@ -658,14 +658,24 @@
 		// translate first tags using the 'translate' class
 		var translateTags = $('.translate');
 		translateTags.each(function(){
-			var text = $(this).text();
+			if(ignore == null){
+				var text = userLanguage == 'pt' ? $(this).attr('data-translationReference') : $(this).text();
+			}else{
+				var text = $(this).text();
+			}
 			text = text.trim();
 			try{
+				if(userLanguage == 'pt'){
+					$(this).attr('data-translationReference', text);
+				}
 				var translatedText = allTranslations[text][userLanguage];
 			}catch{
 
 			}
 			if(translatedText == ''){
+				if(userLanguage == 'pt'){
+					$(this).attr('data-translationReference', text);
+				}
 				translatedText = allTranslations[text]['pt'];
 			}
 			$(this).text(translatedText);
@@ -676,11 +686,17 @@
 			var placeholder = $(this).attr('placeholder');
 			placeholder = placeholder.trim();
 			try{
+				if(userLanguage == 'pt'){
+					$(this).attr('data-translationReference', text);
+				}
 				var translatedText = allTranslations[placeholder][userLanguage];
 			}catch{
 
 			}
 			if(translatedText == ''){
+				if(userLanguage == 'pt'){
+					$(this).attr('data-translationReference', text);
+				}
 				translatedText = allTranslations[placeholder]['pt'];
 			}
 			$(this).attr('placeholder', translatedText);
