@@ -426,10 +426,10 @@
 		}
 		rawFile.send(null);
 	}
-	readTranslationsJSONFile();
 
 	var screenSize = 0;
 	$(document).ready(function(){
+		readTranslationsJSONFile();
 		getPositions();
 		resizeByJS();
 		translateSystem();
