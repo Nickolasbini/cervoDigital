@@ -10,7 +10,7 @@
 		"es": ""
 	},
 	"Tenha sites profissionais e maior alcançe de vendas !":{
-		"en": "Have professionals sites and achieve a higher sellings",
+		"en": "Have professional sites and achieve higher sellings",
 		"pt": "Tenha sites profissionais e maior alcançe de vendas !",
 		"es": ""
 	},
@@ -25,7 +25,7 @@
 		"es": ""
 	},
 	"Somos uma agência especializada em desenvolvimento de sites, aplicações web e marketing digital":{
-		"en": "W are an agency specialized in site development, web applications and digital marketing",
+		"en": "We are an agency specialized in site development, web applications and digital marketing",
 		"pt": "Somos uma agência especializada em desenvolvimento de sites, aplicações web e marketing digital",
 		"es": ""
 	},
@@ -262,6 +262,41 @@
 	"O site está carregando":{
 		"en": "The site is loading",
 		"pt": "O site está carregando",
+		"es": ""
+	},
+	"Sobre Nos":{
+		"en": "About Us",
+		"pt": "Sobre Nos",
+		"es": ""
+	},
+	"Serviços":{
+		"en": "Services",
+		"pt": "Serviços",
+		"es": ""
+	},
+	"Clientes":{
+		"en": "Clients",
+		"pt": "Clientes",
+		"es": ""
+	},
+	"Blog":{
+		"en": "Blog",
+		"pt": "Blog",
+		"es": ""
+	},
+	"Entre em contato":{
+		"en": "Get in contact",
+		"pt": "Entre em contato",
+		"es": ""
+	},
+	"© Copyright agência cervo digital. 2021 - Todos os direitos reservados":{
+		"en": "© Copyright agency cervo digital. 2021 - All right reserved",
+		"pt": "© Copyright agência cervo digital. 2021 - Todos os direitos reservados",
+		"es": ""
+	},
+	"Enviar":{
+		"en": "Send",
+		"pt": "Enviar",
 		"es": ""
 	}
 }
