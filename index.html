@@ -408,10 +408,6 @@
 
 <script type="text/javascript" src="resourses/messager-toast.js"></script>
 <script type="text/javascript">
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
-
 	// gets data of translation file 
 	var allTranslations = null;
 	function readTranslationsJSONFile(file = 'translations.json')
@@ -433,6 +429,9 @@
 
 	var screenSize = 0;
 	$(document).ready(function(){
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
 		readTranslationsJSONFile();
 		getPositions();
 		resizeByJS();
