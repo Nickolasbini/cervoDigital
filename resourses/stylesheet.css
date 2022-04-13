@@ -509,6 +509,9 @@ a:hover{
 }
 .wrapper-of-card{
 	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .wrapper-of-card:hover{
 	opacity: 0.5;
