@@ -7,5 +7,5 @@ function openToast(message = ''){
 }
 
 $('#messager').on('click', function(){
-    $('#messager').fadeOut();
+    $('#messager').hide();
 });
