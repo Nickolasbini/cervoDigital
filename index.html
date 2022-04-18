@@ -662,22 +662,22 @@
 		var subject = $('#message-title').val();
 		var body    = $('#message-text').val();
 		if(email == ''){
-			openToast(emailModal[userLanguage]['mail']);
+			openToast(emailModal['mail'][userLanguage]);
 			return;
 		}
 		if(name == ''){
-			openToast(emailModal[userLanguage]['name']);
+			openToast(emailModal['name'][userLanguage]);
 			return;
 		}
 		if(subject == ''){
-			openToast(emailModal[userLanguage]['title']);
+			openToast(emailModal['title'][userLanguage]);
 			return;
 		}
 		if(body == ''){
-			openToast(emailModal[userLanguage]['message']);
+			openToast(emailModal['message'][userLanguage]);
 			return;
 		}
-		body += '%0D%0A%0D%0A'+emailModal[userLanguage]['body']+': ' + name + '%0D%0A%0D%0A';
+		body += '%0D%0A%0D%0A'+emailModal['body'][userLanguage]+': ' + name + '%0D%0A%0D%0A';
 		window.open('mailto:'+cervoDigitalMail+'?subject='+subject+'&body='+body);
 		$('#email').val('');
 		$('#name').val('');
