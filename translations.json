@@ -298,5 +298,10 @@
 		"en": "Send",
 		"pt": "Enviar",
 		"es": ""
+	},
+	"Prévia":{
+		"en": "preview",
+		"pt": "prévia",
+		"es": ""
 	}
 }
