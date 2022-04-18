@@ -631,6 +631,30 @@
 		sendEmail();
 	});
 
+	var emailModal = {
+		"mail": {
+			"en": "enter an email",
+			"pt": "insira um email"
+		},
+		"name": {
+			"en": "enter your name",
+			"pt": "insira um nome"
+		},
+		"title": {
+			"en": "enter a title",
+			"pt": "insira um título"
+		},
+		"message": {
+			"en": "enter a message",
+			"pt": "insira uma mensagem"
+		},
+		"body": {
+			"en": "best regards",
+			"pt": "atensiosamente"
+		}
+	};
+
+	var userLanguage = 'pt';
 	var cervoDigitalMail = 'cervodigital@hotmail.com';
 	function sendEmail(){
 		var email   = $('#email').val();
@@ -638,22 +662,22 @@
 		var subject = $('#message-title').val();
 		var body    = $('#message-text').val();
 		if(email == ''){
-			openToast('insira um email');
+			openToast(emailModal[userLanguage]['mail']);
 			return;
 		}
 		if(name == ''){
-			openToast('insira um nome');
+			openToast(emailModal[userLanguage]['name']);
 			return;
 		}
 		if(subject == ''){
-			openToast('insira um titulo');
+			openToast(emailModal[userLanguage]['title']);
 			return;
 		}
 		if(body == ''){
-			openToast('insira uma mensage');
+			openToast(emailModal[userLanguage]['message']);
 			return;
 		}
-		body += '%0D%0A%0D%0AAtensiosamente: ' + name + '%0D%0A%0D%0A';
+		body += '%0D%0A%0D%0A'+emailModal[userLanguage]['body']+': ' + name + '%0D%0A%0D%0A';
 		window.open('mailto:'+cervoDigitalMail+'?subject='+subject+'&body='+body);
 		$('#email').val('');
 		$('#name').val('');
@@ -686,7 +710,6 @@
 		window.open(whatsAppLink);
 	});
 
-	var userLanguage = 'pt';
 	function translateSystem(languageISO = null, ignore = null){
 		if(languageISO == null){
 			getUserLanguage();
@@ -760,6 +783,9 @@
 			}
 			$(this).attr('title', translatedText);
 		});
+		emailModal = {
+
+		};
 	}
 
 	function getUserLanguage(){
