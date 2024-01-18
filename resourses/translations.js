@@ -326,7 +326,7 @@ var systemTranslations = {
 	},
 	"Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito atráves de um e-commerce simplês e intuitivo.":{
 		"en":"The best perfumes, the best navigation and experience when choosing and buying your favorite perfume navigating in a simple and intuitive e-commerce.",
-		"pt":"Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito atráves de um e-commerce simplês e intuitivo.",
+		"pt":"Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito através de um e-commerce simples e intuitivo.",
 		"es":""
 	},
 	"Rede social gerenciada da Teacher Maestra Victoria":{
