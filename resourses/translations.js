@@ -1,4 +1,4 @@
-{
+var systemTranslations = {
 	"Agência Cervo Digital":{
 		"en": "Agency Cervo Digital",
 		"pt": "Agência Cervo Digital",
@@ -308,5 +308,35 @@
 		"en":"banner",
 		"pt":"bandeira",
 		"es":""
-	}
-}
+	},
+	"Fórum para Fanfics Web Novelas Brasil":{
+		"en":"Fanfics forum Web Novelas Brasil",
+		"pt":"Fórum para Fanfics Web Novelas Brasil",
+		"es":""
+	},
+	"Já pensou em escrever suas próprias histórias dos mais diversos tipos? Então você encontrou o site certo.":{
+		"en":"Have you ever thought about writting your own histories of the most diverse types? So you have found the right website.",
+		"pt":"Já pensou em escrever suas próprias histórias dos mais diversos tipos? Então você encontrou o site certo.",
+		"es":""
+	},
+	"E-commerce de perfumes Beauty Boutique":{
+		"en":"E-commerce of perfumes Beauty Boutique",
+		"pt":"E-commerce de perfumes Beauty Boutique",
+		"es":""
+	},
+	"Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito atráves de um e-commerce simplês e intuitivo.":{
+		"en":"The best perfumes, the best navigation and experience when choosing and buying your favorite perfume navigating in a simple and intuitive e-commerce.",
+		"pt":"Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito atráves de um e-commerce simplês e intuitivo.",
+		"es":""
+	},
+	"Rede social gerenciada da Teacher Maestra Victoria":{
+		"en":"Managed social media of Teacher Maestra Victoria",
+		"pt":"Rede social gerenciada da Teacher Maestra Victoria",
+		"es":""
+	},
+	"Quer aprender espanhol e inglês de maneira fácil, divertida e prática? Então a Teacher Maestra Victoria é a professora perfeita para você.":{
+		"en":"Do you want to learn spanish and english in a easy way, fun and pratical? So Teacher Maestra Victoria is the perfect teacher for you.",
+		"pt":"Quer aprender espanhol e inglês de maneira fácil, divertida e prática? Então a Teacher Maestra Victoria é a professora perfeita para você.",
+		"es":""
+	},
+};
