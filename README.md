@@ -2,6 +2,6 @@
 One page website.
 
 ## Tecnologias
- - PHP
+ - HTML / CSS
  - Jquery
  - JavaScript
