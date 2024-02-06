@@ -318,46 +318,23 @@
 
 		<section id="clients" class="container mt-5">
 			<h4 class="bigger-font center-text mt-5 mb-5 translate">Clientes e Trabalhos</h4>
-			<div class="col d-flex justify-content-around" style="flex-wrap: wrap;">
-				<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="">
-					<div class="card-title p-2 translate">
-						Aplicação Web
+		</section>
+		<section class="pt-5 pb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-right carrousel-control">
+						<a class="btn btn-primary mb-3 mr-1 prev-btn translate" role="button" data-slide="prev" onclick="handleSlide('prev')">
+							Anterior
+						</a>
+						<a class="btn btn-primary mb-3 next-btn translate" role="button" data-slide="next" onclick="handleSlide('next')">
+							Próximo
+						</a>
 					</div>
-					<div class="w-100 target-image">
-						<img class="img-fluid" width="350" src="works/webnovelasbrasil-site-preview.webp" alt="work" title="web novelas brasil">
+					<div class="col-12">
+						<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner"></div>
+						</div>
 					</div>
-					<div class="p-2">
-						<img class="trans-title" src="resourses/icon/eye.svg" alt="icon" width="25" title="prévia">
-					</div>
-					<div class="title translate" style="display:none;">Fórum para Fanfics Web Novelas Brasil</div>
-					<div class="desc  translate" style="display:none;">Já pensou em escrever suas próprias histórias dos mais diversos tipos? Então você encontrou o site certo.</div>
-				</div>
-				<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="">
-					<div class="card-title p-2">
-						E-commerce
-					</div>
-					<div class="w-100 target-image">
-						<img class="img-fluid"  width="350" src="works/beautyboutique-site-preview.webp" alt="work" title="beauty boutique">
-					</div>
-					<div class="p-2">
-						<img class="trans-title" src="resourses/icon/eye.svg" alt="icon" width="25" title="prévia">
-					</div>
-					<div class="title translate" style="display:none;">E-commerce de perfumes Beauty Boutique</div>
-					<div class="desc  translate" style="display:none;">Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito atráves de um e-commerce simplês e intuitivo.</div>
-				</div>
-				<div class="wrapper-of-card col-sm-4 col-md-4 center-text border rounded" attr-site-link="">
-					<div class="card-title p-2">
-						Gestão de midias sociais
-					</div>
-					<div class="w-100 target-image">
-						<img class="img-fluid"  width="350" src="works/teacher_maestra_victoria_preview.webp" alt="work" title="beauty boutique">
-					</div>
-					<div class="p-2">
-						<img class="trans-title" src="resourses/icon/eye.svg" alt="icon" width="25" title="prévia">
-					</div>
-					<div class="title translate" style="display:none;">Rede social gerenciada da Teacher Maestra Victoria</div>
-					<div class="desc  translate" style="display:none;">Quer aprender espanhol e inglês de maneira fácil, divertida e prática? Então a Teacher Maestra Victoria é a professora perfeita para você.</div>
-					<div class="link" style="display:none;">https://www.instagram.com/teachermaestravictoria/</div>
 				</div>
 			</div>
 		</section>
@@ -498,6 +475,8 @@
 		$('.loader-of-page').hide();
 		$('.all-page-data').show();
 		$('#languages-modal').modal('show');
+
+		generateClientsCard();
 	});
 
 	// detect when the window resizes
@@ -852,4 +831,89 @@
 		}
 		el.modal('show');
 	});
+
+	$(document).off('click', '.open-card-modal');
+	$(document).on('click', '.open-card-modal', function(){
+		var title = $(this).find('.title').text();
+		var desc  = $(this).find('.desc').text();
+		var img   = $(this).find('.target-image').html();
+		var link  = $(this).find('.link');
+		link      = link.length > 0 ? link.text() : '';
+		var el    = $('#details-modal');
+		el.find('.modal-head').text(title);
+		el.find('.modal-body .desc').text(desc);
+		el.find('.modal-body .img').html(img);
+		el.find('.modal-body .link').text(link);
+		el.find('.modal-body .link').attr('href', link);
+		if(link != ''){
+			el.find('.modal-body .link').parent().show();
+		}else{
+			el.find('.modal-body .link').parent().hide();
+		}
+		el.modal('show');
+	});
+
+	var clientsCardsPages = 0;
+	var clients = [
+		{cardTitle: 'Aplicação Web', modalTitle: 'Fórum para Fanfics Web Novelas Brasil', modalBody: 'Já pensou em escrever suas próprias histórias dos mais diversos tipos? Então você encontrou o site certo.', imagePath: 'works/webnovelasbrasil-site-preview.webp', imageTitle: 'web novelas brasil'},
+		{cardTitle: 'E-commerce', modalTitle: 'E-commerce de perfumes Beauty Boutique', modalBody: 'Os melhores perfumes, a melhor navegação e experiência na sua escolha e compra do seu perfume favorito atráves de um e-commerce simplês e intuitivo.', imagePath: 'works/beautyboutique-site-preview.webp', imageTitle: 'beauty boutique'},
+		{cardTitle: 'Gestão de Mídias Sociais', modalTitle: 'Rede social gerenciada da Teacher Maestra Victoria', modalBody: 'Quer aprender espanhol e inglês de maneira fácil, divertida e prática? Então a Teacher Maestra Victoria é a professora perfeita para você.', imagePath: 'works/teacher_maestra_victoria_preview.webp', imageTitle: 'teacher maestra victoria', modalLink: 'https://www.instagram.com/teachermaestravictoria/'},
+		{cardTitle: 'Landing Page', modalTitle: 'Página única da empresa de paíneis solares Kairos Solar', modalBody: 'Deseja economizar a energia de sua casa ou estabelecimento de forma sustentavel, infinita e com total suporte? Então a Kairos Solar é a opção ideal.', imagePath: 'works/kairossolar-site-preview.webp', imageTitle: 'kairos solar', modalLink: 'https://www.kairossolar.com.br'}
+	];
+	function generateClientsCard(){
+		clientsCardsPages = Math.ceil(clients.length / 3);
+		var html = '';
+		var itemCount = 0;
+		var firstRow  = true;
+		for(var i = 0; i < clients.length; i++){
+			if(itemCount == 0){
+				if(firstRow == true){
+					html += '<div class="carousel-item active"><div class="row">';
+					firstRow = false;
+				}else{
+					html += '<div class="carousel-item"><div class="row">';
+				}
+			}
+			html += '<div class="col-md-4 mb-3">';
+				html += '<div class="card w-100 overflow-auto">';
+					html += '<div class="card-body open-card-modal cursor-pointer">';
+						html += '<h4 class="card-title translate text-center">'+clients[i].cardTitle+'</h4>';
+						html += '<div class="target-image"><img class="img-fluid trans-title" alt="'+clients[i].imageTitle+'" src="'+clients[i].imagePath+'"></div>';
+						html += '<div class="p-2 text-center"><img class="trans-title" src="resourses/icon/eye.svg" alt="icon" width="25" title="prévia"></div>';
+						html += '<div class="title translate" style="display:none;">'+clients[i].modalTitle+'</div>';
+						html += '<div class="desc  translate" style="display:none;">'+clients[i].modalBody+'</div>';
+						if(clients[i].modalLink != undefined)
+							html += '<div class="link" style="display:none;">'+clients[i].modalLink+'</div>';
+					html += '</div>';
+				html += '</div>';
+			html += '</div>';
+			if(itemCount == 2){
+				itemCount = 0;
+				html += '</div></div>';
+			}else{
+				itemCount++;
+			}
+		}
+		$('.carousel-inner').html(html);
+		checkClientsCarrousel();
+	}
+
+	var currentPage = 1;
+	function handleSlide(type = 'next'){
+		var carrouselEls = $(document).find('.carousel-item');
+		carrouselEls.removeClass('active');
+		if(type == 'next'){
+			currentPage = (currentPage + 1 > clientsCardsPages ? 1 : currentPage + 1);
+		}else{
+			currentPage = (currentPage - 1 == 0 ? clientsCardsPages : currentPage - 1);
+		}
+		carrouselEls.eq(currentPage - 1).addClass('active');
+	}
+
+	function checkClientsCarrousel(){
+		if(clientsCardsPages < 2){
+			$('.carrousel-control').remove();
+			return;
+		}
+	}
 </script>

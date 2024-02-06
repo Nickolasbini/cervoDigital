@@ -339,4 +339,24 @@ var systemTranslations = {
 		"pt":"Quer aprender espanhol e inglês de maneira fácil, divertida e prática? Então a Teacher Maestra Victoria é a professora perfeita para você.",
 		"es":""
 	},
+	"Página única da empresa de paíneis solares Kairos Solar":{
+		"en":"Single page of the solar panel company Kairos Solar",
+		"pt":"Página única da empresa de paíneis solares Kairos Solar",
+		"es":""
+	},
+	"Deseja economizar a energia de sua casa ou estabelecimento de forma sustentavel, infinita e com total suporte? Então a Kairos Solar é a opção ideal.":{
+		"en":"Do you want to save energy in your home or establishment in a sustainable, infinite way and with full support? Then Kairos Solar is the ideal option.",
+		"pt":"Deseja economizar a energia de sua casa ou estabelecimento de forma sustentavel, infinita e com total suporte? Então a Kairos Solar é a opção ideal.",
+		"es":""
+	},
+	"Anterior":{
+		"en":"Previous",
+		"pt":"Anterior",
+		"es":""
+	},
+	"Próximo":{
+		"en":"Next",
+		"pt":"Próximo",
+		"es":""
+	},
 };
