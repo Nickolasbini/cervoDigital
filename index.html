@@ -723,7 +723,7 @@
 			}else{
 				var text = $(this).text();
 			}
-			text = text.trim();
+			text = text != undefined ? text.trim() : '';
 			try{
 				if(userLanguage == 'pt'){
 					$(this).attr('data-translationReference', text);
@@ -744,7 +744,7 @@
 		var inputTags = $('.translate-placeholder');
 		inputTags.each(function(){
 			var placeholder = $(this).attr('placeholder');
-			placeholder = placeholder.trim();
+			placeholder = placeholder != undefined ? placeholder.trim() : '';
 			try{
 				if(userLanguage == 'pt'){
 					$(this).attr('data-translationReference', text);
@@ -765,7 +765,7 @@
 		var inputTags = $('.trans-title');
 		inputTags.each(function(){
 			var title = $(this).attr('title');
-			title = title.trim();
+			title = title != undefined ? title.trim() : '';
 			try{
 				if(userLanguage == 'pt'){
 					$(this).attr('data-translationReference', text);
