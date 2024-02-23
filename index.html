@@ -480,12 +480,10 @@
 		let times    = 0;
 		let interval = setInterval(function(){
 			if(times == 10){
-				console.log('dying')
 				clearInterval(interval);
 			}else{
 				$(document).find('.target-image img').width('auto');
 				$(document).find('#languages-modal .icon img').width('auto');
-				console.log('looping')
 				times++;
 			}
 		}, 1000);
