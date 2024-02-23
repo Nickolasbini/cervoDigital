@@ -11,7 +11,7 @@
 	<link rel="icon" href="images/favicon.webp">
 
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="cache-control" content="public">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
     <meta http-equiv="Last-Modified" content="Mon, 18 Apr 2022 11:04:19">
@@ -23,7 +23,7 @@
     <meta name="distribution" content="global">
     <meta name="rating" content="general">
     <meta name="robots" content="all">
-    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="cache-control" content="public">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
     <meta http-equiv="Last-Modified" content="Mon, 18 Apr 2022 11:04:19">
@@ -69,9 +69,9 @@
 	<div id="languages-modal" class="modal fade" tabindex="-1" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content d-flex flex-row justify-content-around p-4">
-				<a class="icon" data-toggle="tooltip" data-placement="top" title="English" data-languageISO="en"><img src="resourses/icon/en.svg" alt="en icon" title="English"></a>
-				<a class="icon" data-toggle="tooltip" data-placement="top" title="Português" data-languageISO="pt"><img src="resourses/icon/pt.svg" alt="pt icon" title="Português"></a>
-				<!--<a class="icon" data-toggle="tooltip" data-placement="top" title="Espanol" data-languageISO="es"><img src="resourses/icon/es.svg" alt="es icon" title="Espanol"></a>-->
+				<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="English" data-languageISO="en"><img src="resourses/icon/en.svg" alt="en icon" width="50" height="50" title="English"></a>
+				<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="Português" data-languageISO="pt"><img src="resourses/icon/pt.svg" alt="pt icon" width="50" height="50" title="Português"></a>
+				<!--<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="Espanol" data-languageISO="es"><img src="resourses/icon/es.svg" alt="es icon" width="50" title="Espanol"></a>-->
 			</div>
 		</div>
 	</div>
@@ -97,7 +97,7 @@
 			<div class="container-fluid row nav-bar-items">
 				<div class="col-sm-1">
 					<a class="navbar-brand" href="https://cervodigital.com.br"><h5 class="translate">Agência Cervo Digital</h5></a>
-					<button type="button" alt="navbar-toggler-button" class="navbar-toggler float-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					<button type="button" aria-label="navbar-toggler-button" class="navbar-toggler float-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				</div>
@@ -149,7 +149,7 @@
 				<div class="row d-flex justify-content-around">
 					<div class="col-sm-10 col-md-3 align-self-center center-text">
 						<a href="https://cervodigital.com.br">
-							<img class="img-fluid perfect-rounded" src="images/logo.webp" width="350" alt="logo" title="logo">
+							<img class="img-fluid perfect-rounded" src="images/logo.webp" width="350" height="350" alt="logo" title="logo">
 						</a>
 					</div>
 					<div class="col-sm-10 col-md-6 sm-center-text">
@@ -301,7 +301,7 @@
 			<div class="container">
 				<div class="row pt-5 pb-5 sm-center-text ">
 					<div class="col-sm-10 col-md-6">
-						<img class="img-fluid rounded trans-title" src="images/blog-image.webp" alt="icon" width="350" title="blog">
+						<img class="img-fluid rounded trans-title" src="images/blog-image.webp" alt="icon" width="350" height="350" title="blog">
 					</div>
 					<div class="col-sm-10 col-md-6 m-auto sm-mt-5 pt-5 pb-5">
 						<h4 class="bigger-font translate">Por quê ter um site ou marketing digital?</h4>
@@ -398,7 +398,7 @@
 			<div class="row d-flex justify-content-between">
 				<div class="col-sm-1 col-md-2 left-text mt-3 mb-3 sm-center-text">
 					<a href="https://cervodigital.com.br">
-						<img class="img-fluid perfect-rounded sm-w-50" src="images/logo.webp" width="350" alt="logo" title="logo">
+						<img class="img-fluid perfect-rounded sm-w-50" src="images/logo.webp" width="350" height="350" alt="logo" title="logo">
 					</a>
 					<h2 class="small-font regular-font h2">Cervo Digital</h2>
 					<h4 class="small-font regular-font translate">Agência de desenvolvimento web e de marketing digital</h4>
@@ -449,7 +449,7 @@
 		</div>
 		<div class="fixed-button go-up" style="display:none;">
 			<a href="#top-of-page">
-				<img src="resourses/icon/arrow-up.svg" class="pt-2" style="width: 25px;" alt="arrow up icon" title="ir para o topo">
+				<img src="resourses/icon/arrow-up.svg" class="pt-2" width="25" alt="arrow up icon" title="ir para o topo">
 			</a>
 		</div>
 
@@ -477,6 +477,18 @@
 		$('#languages-modal').modal('show');
 
 		generateClientsCard();
+		let times    = 0;
+		let interval = setInterval(function(){
+			if(times == 10){
+				console.log('dying')
+				clearInterval(interval);
+			}else{
+				$(document).find('.target-image img').width('auto');
+				$(document).find('#languages-modal .icon img').width('auto');
+				console.log('looping')
+				times++;
+			}
+		}, 1000);
 	});
 
 	// detect when the window resizes
@@ -878,8 +890,8 @@
 				html += '<div class="card w-100 overflow-auto">';
 					html += '<div class="card-body open-card-modal cursor-pointer">';
 						html += '<h4 class="card-title translate text-center">'+clients[i].cardTitle+'</h4>';
-						html += '<div class="target-image"><img class="img-fluid trans-title" alt="'+clients[i].imageTitle+'" src="'+clients[i].imagePath+'"></div>';
-						html += '<div class="p-2 text-center"><img class="trans-title" src="resourses/icon/eye.svg" alt="icon" width="25" title="prévia"></div>';
+						html += '<div class="target-image"><img class="img-fluid trans-title" width="25" height="25" alt="'+clients[i].imageTitle+'" src="'+clients[i].imagePath+'"></div>';
+						html += '<div class="p-2 text-center"><img class="trans-title" src="resourses/icon/eye.svg" alt="icon" width="25" height="25" title="prévia"></div>';
 						html += '<div class="title translate" style="display:none;">'+clients[i].modalTitle+'</div>';
 						html += '<div class="desc  translate" style="display:none;">'+clients[i].modalBody+'</div>';
 						if(clients[i].modalLink != undefined)
