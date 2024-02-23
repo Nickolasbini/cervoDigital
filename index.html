@@ -2,7 +2,7 @@
 <html lang="pt">
 <head profile="http://gmpg.org/xfn/11">
 	<meta charset="UTF-8">
-	<meta name="description" content="A melhor agência digital criadora de site e de trabalhos relacionados com a internet de Curitiba">
+	<meta name="description" content="A melhor agência digital para criação de sites, aplicações, melhorias de SEO, ADS e de trabalhos relacionados com a internet de Curitiba, venha nos conhecer e não se arrependa.">
 	<meta name="keywords" content="agência digital, site, website, agency">
 	<meta name="author" content="Nickolas Bini">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
     <meta name="reply-to" content="atendimento@neosaga.cc">
     <meta name="custodian" content="atendimento@neosaga.cc">
     <meta property="og:title" content="Cervo digital">
-    <meta property="og:description" content="A melhor agência digital criadora de site e de trabalhos relacionados com a internet de Curitiba">
+    <meta property="og:description" content="A melhor agência digital para criação de sites, aplicações, melhorias de SEO, ADS e de trabalhos relacionados com a internet de Curitiba, venha nos conhecer e não se arrependa.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="url">
     <meta property="og:image" content="https://www.facebook.com/cervo.digital/photos/a.100829288964769/100829885631376/">
@@ -84,7 +84,7 @@
 					<div class="img"></div>
 					<div class="desc mt-3 border-top pt-3 h5"></div>
 					<div class="mt-3 border-top">
-						<a class="link pt-3 h5" href="" target="_blank"></a>
+						<a class="link pt-3 h5" href="" target="_blank" rel="noreferrer"></a>
 					</div>
 				</div>
 			</div>
@@ -406,9 +406,9 @@
 				<div class="col-sm-5 col-md-4 mt-3 mb-3 sm-center-text">
 					<h2 class="medium-font translate h2">Nossos canais</h2>
 					<div class="social-media-icons pt-4 pb-4">
-						<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank"><img id="whatsapp" src="images/whatsapp-gray.svg" title="ver whatsapp" alt="icon" width="350"></a>
-						<a href="https://www.instagram.com/cervodigital_/" target="_blank"><img id="instagram" src="images/instagram-gray.svg" title="ver instagram" alt="icon" width="350"></a>
-						<a href="https://www.facebook.com/cervo.digital" target="_blank"><img id="facebook" src="images/facebook-gray.svg" title="ver facebook" alt="icon" width="350"></a>
+						<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank" rel="noreferrer"><img id="whatsapp" src="images/whatsapp-gray.svg" title="ver whatsapp" alt="icon" width="350"></a>
+						<a href="https://www.instagram.com/cervodigital_/" target="_blank" rel="noreferrer"><img id="instagram" src="images/instagram-gray.svg" title="ver instagram" alt="icon" width="350"></a>
+						<a href="https://www.facebook.com/cervo.digital" target="_blank" rel="noreferrer"><img id="facebook" src="images/facebook-gray.svg" title="ver facebook" alt="icon" width="350"></a>
 					</div>
 					<p class="small-font translate">Brasil</p>
 					<p class="small-font translate">Avenida Archelau de Almeida Torres | Araucária, PR</p>
@@ -445,7 +445,7 @@
 		</section>
 
 		<div class="fixed-button whatsapp-btn">
-			<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank" class="whats-link"><img id="whatsapp" src="images/whatsapp.svg" title="ver whatsapp" alt="icon" width="350"></a>
+			<a href="https://api.whatsapp.com/send?text=Olá&phone=5541984320432" target="_blank" rel="noreferrer" class="whats-link"><img id="whatsapp" src="images/whatsapp.svg" title="ver whatsapp" alt="icon" width="350"></a>
 		</div>
 		<div class="fixed-button go-up" style="display:none;">
 			<a href="#top-of-page">
@@ -865,7 +865,7 @@
 		var html = '';
 		var itemCount = 0;
 		var firstRow  = true;
-		for(var i = 0; i < clients.length; i++){
+		for(let i = 0; i < clients.length; i++){
 			if(itemCount == 0){
 				if(firstRow == true){
 					html += '<div class="carousel-item active"><div class="row">';
@@ -913,7 +913,6 @@
 	function checkClientsCarrousel(){
 		if(clientsCardsPages < 2){
 			$('.carrousel-control').remove();
-			return;
 		}
 	}
 </script>
