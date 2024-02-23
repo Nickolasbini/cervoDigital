@@ -66,7 +66,7 @@
 		</div>
 	</div>
 	
-	<div id="languages-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div id="languages-modal" class="modal fade" tabindex="-1" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content d-flex flex-row justify-content-around p-4">
 				<a class="icon" data-toggle="tooltip" data-placement="top" title="English" data-languageISO="en"><img src="resourses/icon/en.svg" alt="en icon" title="English"></a>
@@ -76,7 +76,7 @@
 		</div>
 	</div>
 
-	<div id="details-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+	<div id="details-modal" class="modal fade" tabindex="-1" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog modal-lg">
 			<div class="modal-content text-center">
 				<div class="modal-head h2 mt-3 border-bottom pb-3"></div>
@@ -97,7 +97,7 @@
 			<div class="container-fluid row nav-bar-items">
 				<div class="col-sm-1">
 					<a class="navbar-brand" href="https://cervodigital.com.br"><h5 class="translate">Agência Cervo Digital</h5></a>
-					<button type="button" class="navbar-toggler float-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					<button type="button" alt="navbar-toggler-button" class="navbar-toggler float-right" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				</div>
@@ -323,10 +323,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-right carrousel-control">
-						<a class="btn btn-primary mb-3 mr-1 prev-btn translate" role="button" data-slide="prev" onclick="handleSlide('prev')">
+						<a class="btn btn-primary mb-3 mr-1 prev-btn translate" data-slide="prev" onclick="handleSlide('prev')">
 							Anterior
 						</a>
-						<a class="btn btn-primary mb-3 next-btn translate" role="button" data-slide="next" onclick="handleSlide('next')">
+						<a class="btn btn-primary mb-3 next-btn translate" data-slide="next" onclick="handleSlide('next')">
 							Próximo
 						</a>
 					</div>
