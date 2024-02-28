@@ -71,7 +71,7 @@
 			<div class="modal-content d-flex flex-row justify-content-around p-4">
 				<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="English" data-languageISO="en"><img src="resourses/icon/en.svg" alt="en icon" width="50" height="50" title="English"></a>
 				<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="Português" data-languageISO="pt"><img src="resourses/icon/pt.svg" alt="pt icon" width="50" height="50" title="Português"></a>
-				<!--<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="Espanol" data-languageISO="es"><img src="resourses/icon/es.svg" alt="es icon" width="50" title="Espanol"></a>-->
+				<a class="icon text-center" data-toggle="tooltip" data-placement="top" title="Espanol" data-languageISO="es"><img src="resourses/icon/es.svg" alt="es icon" width="50"  height="50" title="Espanol"></a>
 			</div>
 		</div>
 	</div>
@@ -197,18 +197,18 @@
 				<div class="card fast-transition zoom-in">
 					<div class="card-top">
 						<img src="images/web-icon.webp" alt="icon" width="350" class="trans-title" title="website">
-						<h6 class="title-of-card" class="translate">
+						<h6 class="title-of-card translate">
 							Criação de sites
 						</h6>
 					</div>
-					<div class="card-body" class="translate">
+					<div class="card-body translate">
 						Criamos, atualizamos e desenvolvemos sites profissionais, agradáveis e harmônicos
 					</div>
 				</div>
 				<div class="card fast-transition zoom-in">
 					<div class="card-top">
 						<img src="images/landingpage-icon.webp" alt="icon" width="350" class="trans-title" title="landing page">
-						<h6 class="title-of-card">
+						<h6 class="title-of-card translate">
 							Landing Pages
 						</h6>
 					</div>
@@ -219,7 +219,7 @@
 				<div class="card fast-transition zoom-in">
 					<div class="card-top">
 						<img src="images/ecommerce-icon.webp" alt="icon" width="350" class="trans-title" title="e-commerce">
-						<h6 class="title-of-card">
+						<h6 class="title-of-card translate">
 							E-commerce
 						</h6>
 					</div>
@@ -245,14 +245,14 @@
 							Suporte analítico e criativo
 						</h6>
 					</div>
-					<div class="card-body">
+					<div class="card-body translate">
 						Artes para postagem, idéias criativas para frases de efeito real
 					</div>
 				</div>
 				<div class="card fast-transition zoom-in">
 					<div class="card-top">
 						<img src="images/adwords-icon.webp" alt="icon" width="350" class="trans-title" title="adwords">
-						<h6 class="title-of-card">
+						<h6 class="title-of-card translate">
 							Ads
 						</h6>
 					</div>
@@ -263,7 +263,7 @@
 				<div class="card fast-transition zoom-in">
 					<div class="card-top">
 						<img src="images/seo-icon.webp" alt="icon" width="350" class="trans-title" title="seo">
-						<h6 class="title-of-card">
+						<h6 class="title-of-card translate">
 							SEO
 						</h6>
 					</div>
@@ -793,6 +793,7 @@
 			}
 			$(this).attr('title', translatedText);
 		});
+		currentLanguage = userLanguage;
 	}
 
 	function getUserLanguage(){
@@ -812,8 +813,14 @@
 		$(document).scrollTop(scrollTo);
 	});
 
+	let currentLanguage = 'pt';
 	$('.icon img').on('click', function(){
 		userLanguage = $(this).parent().attr('data-languageISO');
+		let selectedLang = userLanguage;
+		if((currentLanguage == 'en' || currentLanguage == 'es') && userLanguage != 'pt'){
+			translateSystem('pt');
+			userLanguage = selectedLang;
+		}
 		translateSystem(userLanguage);
 		$('#languages-modal').modal('hide');
 		$('#changeLanguageFlag').find('img').attr('src', 'resourses/icon/'+ userLanguage + '.svg');
@@ -876,7 +883,7 @@
 		var html = '';
 		var itemCount = 0;
 		var firstRow  = true;
-		for(let i = 0; i < clients.length; i++){
+		for(let i in clients){
 			if(itemCount == 0){
 				if(firstRow == true){
 					html += '<div class="carousel-item active"><div class="row">';
