@@ -460,18 +460,42 @@
 </html>
 
 <script type="text/javascript">
+	const queryString = window.location.search;
+
+	function readAndUseParams(){
+		if(queryString.indexOf('?') == -1)
+			return;
+		let params = queryString.replace('?', '');
+		let paramsArray = params.split('&');
+		for(let index in paramsArray){
+			let array = paramsArray[index].split('=');
+			if(array.length != 2)
+				continue;
+			let paramData = {
+				key:   array[0],
+				value: array[1]
+			};
+			switch(paramData.key){
+				case 'lang':
+					translateSystem(paramData.value);
+				break;
+				default:
+					translateSystem(null, true);
+				break;
+			}
+		}
+	}
+
 	// gets data of translation file 
-	var allTranslations = null;
+	const allTranslations = systemTranslations;
 
 	var screenSize = 0;
 	$(document).ready(function(){
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip();
 		});
-		allTranslations = systemTranslations;
 		getPositions();
 		resizeByJS();
-		translateSystem(null, true);
 		$('.loader-of-page').hide();
 		$('.all-page-data').show();
 		$('#languages-modal').modal('show');
@@ -794,6 +818,9 @@
 			$(this).attr('title', translatedText);
 		});
 		currentLanguage = userLanguage;
+		let flagEl = $('#changeLanguageFlag img');
+		flagEl.attr('src', 'resourses/icon/'+currentLanguage+'.svg');
+		flagEl.attr('alt', +currentLanguage+' icon');
 	}
 
 	function getUserLanguage(){
@@ -933,6 +960,8 @@
 			$('.carrousel-control').remove();
 		}
 	}
+
+	readAndUseParams();
 </script>
 <script type="application/ld+json">
 	{
