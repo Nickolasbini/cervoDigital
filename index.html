@@ -58,6 +58,8 @@
     <script type="text/javascript" src="resourses/bootstrap/jquery/proper.min.js"></script>
     <script type="text/javascript" src="resourses/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="resourses/translations.js"></script>
+	<!-- Messager component -->
+	<script type="text/javascript" src="resourses/messager-toast.js"></script>
 </head>
 <body>
 	<div vw class="enabled hidden-xs hidden-sm">
@@ -489,6 +491,11 @@
 
 	// gets data of translation file 
 	const allTranslations = systemTranslations;
+	$('.translate').each(function(){
+		let text = $(this).text();
+		if(allTranslations[text] != undefined)
+			$(this).attr('data-translationReference', allTranslations[text].pt);
+	});
 
 	var screenSize = 0;
 	$(document).ready(function(){
